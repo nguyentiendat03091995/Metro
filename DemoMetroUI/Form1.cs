@@ -48,7 +48,7 @@ namespace DemoMetroUI
             ucDashboard uc = new ucDashboard();
             uc.Dock = DockStyle.Fill;
             mPanel.Controls.Add(uc);
-            //jfdsạdklsadfghjkl
+            //jfdsạdklsadfghjklghghkgkj
         }
 
         private void mlBack_Click(object sender, EventArgs e)
