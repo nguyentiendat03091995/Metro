@@ -1,6 +1,6 @@
 ﻿namespace DemoMetroUI.userControl
 {
-    partial class dangNhap
+    partial class ucDangky
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // dangKy
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "dangKy";
+            this.Size = new System.Drawing.Size(702, 404);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

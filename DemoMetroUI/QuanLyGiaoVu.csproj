@@ -76,17 +76,17 @@
     <Compile Include="ucDashboard.Designer.cs">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="userControl\dangKy.cs">
+    <Compile Include="userControl\ucDangky.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="userControl\dangKy.Designer.cs">
-      <DependentUpon>dangKy.cs</DependentUpon>
+    <Compile Include="userControl\ucDangky.Designer.cs">
+      <DependentUpon>ucDangky.cs</DependentUpon>
     </Compile>
-    <Compile Include="userControl\dangNhap.cs">
+    <Compile Include="userControl\ucDangnhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="userControl\dangNhap.Designer.cs">
-      <DependentUpon>dangNhap.cs</DependentUpon>
+    <Compile Include="userControl\ucDangnhap.Designer.cs">
+      <DependentUpon>ucDangnhap.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -103,6 +103,12 @@
     </Compile>
     <EmbeddedResource Include="ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucDangky.resx">
+      <DependentUpon>ucDangky.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\ucDangnhap.resx">
+      <DependentUpon>ucDangnhap.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

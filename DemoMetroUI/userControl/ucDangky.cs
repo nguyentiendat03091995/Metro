@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DemoMetroUI.userControl
 {
-    public partial class dangKy : UserControl
+    public partial class ucDangky : UserControl
     {
-        public dangKy()
+        public ucDangky()
         {
             InitializeComponent();
         }

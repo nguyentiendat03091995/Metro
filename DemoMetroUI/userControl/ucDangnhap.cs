@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace DemoMetroUI.userControl
 {
-    public partial class dangNhap : UserControl
+    public partial class ucDangnhap : MetroFramework.Controls.MetroUserControl
     {
-        public dangNhap()
+        public ucDangnhap()
         {
             InitializeComponent();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

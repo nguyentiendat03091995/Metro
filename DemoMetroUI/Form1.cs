@@ -45,9 +45,11 @@ namespace DemoMetroUI
         {
             mlBack.Visible = false;
             _instance = this;
-            ucDashboard uc = new ucDashboard();
-            uc.Dock = DockStyle.Fill;
-            mPanel.Controls.Add(uc);
+            //ucDashboard uc = new ucDashboard();
+            //uc.Dock = DockStyle.Fill;
+            
+            
+            //mPanel.Controls.Add(uc);
         }
 
         private void mlBack_Click(object sender, EventArgs e)
