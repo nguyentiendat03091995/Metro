@@ -1,6 +1,6 @@
 ﻿namespace DemoMetroUI
 {
-    partial class Form1
+    partial class frMain
     {
         /// <summary>
         /// Required designer variable.
@@ -59,14 +59,14 @@
             this.mlBack.UseSelectable = true;
             this.mlBack.Click += new System.EventHandler(this.mlBack_Click);
             // 
-            // Form1
+            // frMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 490);
             this.Controls.Add(this.mlBack);
             this.Controls.Add(this.mPanel);
-            this.Name = "Form1";
+            this.Name = "frMain";
             this.Text = "Metro Framework";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

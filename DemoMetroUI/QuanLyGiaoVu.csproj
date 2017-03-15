@@ -76,6 +76,24 @@
     <Compile Include="ucDashboard.Designer.cs">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="userControl\giangVien\ucCreategv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\giangVien\ucCreategv.Designer.cs">
+      <DependentUpon>ucCreategv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\monHoc\ucCreatemh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\monHoc\ucCreatemh.Designer.cs">
+      <DependentUpon>ucCreatemh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\sinhVien\ucCreatesv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\sinhVien\ucCreatesv.Designer.cs">
+      <DependentUpon>ucCreatesv.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControl\ucDangky.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,6 +122,15 @@
     <EmbeddedResource Include="ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="userControl\giangVien\ucCreategv.resx">
+      <DependentUpon>ucCreategv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\monHoc\ucCreatemh.resx">
+      <DependentUpon>ucCreatemh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\sinhVien\ucCreatesv.resx">
+      <DependentUpon>ucCreatesv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userControl\ucDangky.resx">
       <DependentUpon>ucDangky.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,11 +154,7 @@
   <ItemGroup>
     <None Include="Resources\1489502099_Previous_2.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="userControl\giangVien\" />
-    <Folder Include="userControl\monHoc\" />
-    <Folder Include="userControl\sinhVien\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

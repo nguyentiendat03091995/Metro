@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
+            this.mtThem = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
@@ -40,16 +40,17 @@
             this.metroTile8 = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
-            // metroTile3
+            // mtThem
             // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(3, 47);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(214, 90);
-            this.metroTile3.TabIndex = 0;
-            this.metroTile3.Text = "Thêm";
-            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile3.UseSelectable = true;
+            this.mtThem.ActiveControl = null;
+            this.mtThem.Location = new System.Drawing.Point(3, 47);
+            this.mtThem.Name = "mtThem";
+            this.mtThem.Size = new System.Drawing.Size(214, 90);
+            this.mtThem.TabIndex = 0;
+            this.mtThem.Text = "Thêm";
+            this.mtThem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.mtThem.UseSelectable = true;
+            this.mtThem.Click += new System.EventHandler(this.metroTile3_Click);
             // 
             // metroTile4
             // 
@@ -147,7 +148,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroTile9);
-            this.Controls.Add(this.metroTile3);
+            this.Controls.Add(this.mtThem);
             this.Controls.Add(this.metroTile5);
             this.Controls.Add(this.metroTile10);
             this.Controls.Add(this.metroTile2);
@@ -164,7 +165,7 @@
         }
 
         #endregion
-        private MetroFramework.Controls.MetroTile metroTile3;
+        private MetroFramework.Controls.MetroTile mtThem;
         private MetroFramework.Controls.MetroTile metroTile4;
         private MetroFramework.Controls.MetroTile metroTile5;
         private MetroFramework.Controls.MetroTile metroTile7;

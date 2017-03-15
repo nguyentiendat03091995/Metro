@@ -7,18 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DemoMetroUI.userControl;
+using MetroFramework;
+using MetroFramework.Forms;
 
 namespace DemoMetroUI
 {
-    public partial class Form1 : MetroFramework.Forms.MetroForm
+    public partial class frMain : MetroFramework.Forms.MetroForm
     {
-        static Form1 _instance;
-        public static Form1 Instance
+        static frMain _instance;
+        public static frMain Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new Form1();
+                    _instance = new frMain();
                 return _instance;
             }
         }
@@ -36,7 +39,7 @@ namespace DemoMetroUI
             get { return mlBack; }
             set { mlBack = value; }
         }
-        public Form1()
+        public frMain()
         {
             InitializeComponent();
         }
@@ -47,16 +50,15 @@ namespace DemoMetroUI
             _instance = this;
             //ucDashboard uc = new ucDashboard();
             //uc.Dock = DockStyle.Fill;
-            
-            
-            //mPanel.Controls.Add(uc);
+
+            ucDangnhap uc = new ucDangnhap();
+            mPanel.Controls.Add(uc);
         }
 
         private void mlBack_Click(object sender, EventArgs e)
         {
             mPanel.Controls["ucDashboard"].BringToFront();
             mlBack.Visible = false;
-
         }
     }
 }

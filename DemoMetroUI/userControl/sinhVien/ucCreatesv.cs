@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DemoMetroUI
+namespace DemoMetroUI.userControl.sinhVien
 {
-    public partial class ucDashboard : MetroFramework.Controls.MetroUserControl
+    public partial class ucCreatesv : MetroFramework.Controls.MetroUserControl
     {
-        public ucDashboard()
+        public ucCreatesv()
         {
             InitializeComponent();
         }
 
-        private void ucDashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTile3_Click(object sender, EventArgs e)
+        private void ucCreatesv_Load(object sender, EventArgs e)
         {
 
         }

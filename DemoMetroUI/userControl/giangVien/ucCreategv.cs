@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DemoMetroUI
+namespace DemoMetroUI.userControl.giangVien
 {
-    public partial class ucDashboard : MetroFramework.Controls.MetroUserControl
+    public partial class ucCreategv : MetroFramework.Controls.MetroUserControl
     {
-        public ucDashboard()
+        public ucCreategv()
         {
             InitializeComponent();
         }
 
-        private void ucDashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTile3_Click(object sender, EventArgs e)
+        private void ucCreategv_Load(object sender, EventArgs e)
         {
 
         }
