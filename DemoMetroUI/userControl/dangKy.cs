@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DemoMetroUI
+namespace DemoMetroUI.userControl
 {
-    public partial class ucDashboard : MetroFramework.Controls.MetroUserControl
+    public partial class dangKy : UserControl
     {
-        public ucDashboard()
+        public dangKy()
         {
             InitializeComponent();
-        }
-
-        private void ucDashboard_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

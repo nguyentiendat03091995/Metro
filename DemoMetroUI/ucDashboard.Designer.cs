@@ -158,6 +158,7 @@
             this.Controls.Add(this.metroTile7);
             this.Name = "ucDashboard";
             this.Size = new System.Drawing.Size(702, 404);
+            this.Load += new System.EventHandler(this.ucDashboard_Load);
             this.ResumeLayout(false);
 
         }

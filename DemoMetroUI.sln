@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoMetroUI", "DemoMetroUI\DemoMetroUI.csproj", "{F533C8F4-9354-4541-B301-210121A6F687}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyGiaoVu", "DemoMetroUI\QuanLyGiaoVu.csproj", "{F533C8F4-9354-4541-B301-210121A6F687}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

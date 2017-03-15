@@ -76,6 +76,18 @@
     <Compile Include="ucDashboard.Designer.cs">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="userControl\dangKy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\dangKy.Designer.cs">
+      <DependentUpon>dangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\dangNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\dangNhap.Designer.cs">
+      <DependentUpon>dangNhap.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +120,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1489502099_Previous_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="userControl\giangVien\" />
+    <Folder Include="userControl\monHoc\" />
+    <Folder Include="userControl\sinhVien\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
