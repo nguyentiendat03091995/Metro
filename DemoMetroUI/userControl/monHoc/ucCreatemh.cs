@@ -21,5 +21,12 @@ namespace DemoMetroUI.userControl.monHoc
         {
 
         }
+
+        private void mlBack_Click(object sender, EventArgs e)
+        {
+            ucThem uc = new ucThem();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucThem"].BringToFront();
+        }
     }
 }

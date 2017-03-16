@@ -52,7 +52,7 @@
             // 
             this.mlBack.Image = global::DemoMetroUI.Properties.Resources._1489502099_Previous_2;
             this.mlBack.ImageSize = 32;
-            this.mlBack.Location = new System.Drawing.Point(23, 18);
+            this.mlBack.Location = new System.Drawing.Point(296, 18);
             this.mlBack.Name = "mlBack";
             this.mlBack.Size = new System.Drawing.Size(75, 39);
             this.mlBack.TabIndex = 1;

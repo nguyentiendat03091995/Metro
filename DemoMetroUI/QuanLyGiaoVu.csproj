@@ -76,6 +76,12 @@
     <Compile Include="ucDashboard.Designer.cs">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucThem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucThem.Designer.cs">
+      <DependentUpon>ucThem.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControl\giangVien\ucCreategv.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </Compile>
     <EmbeddedResource Include="ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucThem.resx">
+      <DependentUpon>ucThem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\giangVien\ucCreategv.resx">
       <DependentUpon>ucCreategv.cs</DependentUpon>

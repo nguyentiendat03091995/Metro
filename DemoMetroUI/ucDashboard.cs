@@ -24,7 +24,9 @@ namespace DemoMetroUI
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
-
+            ucThem uc = new ucThem();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucThem"].BringToFront();
         }
     }
 }

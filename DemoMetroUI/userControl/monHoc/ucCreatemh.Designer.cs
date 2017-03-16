@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.mlBack = new MetroFramework.Controls.MetroLink();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -41,10 +42,22 @@
             this.metroLabel1.TabIndex = 1;
             this.metroLabel1.Text = "Thêm Mới Môn Học";
             // 
+            // mlBack
+            // 
+            this.mlBack.Image = global::DemoMetroUI.Properties.Resources._1489502099_Previous_2;
+            this.mlBack.ImageSize = 32;
+            this.mlBack.Location = new System.Drawing.Point(0, 0);
+            this.mlBack.Name = "mlBack";
+            this.mlBack.Size = new System.Drawing.Size(75, 39);
+            this.mlBack.TabIndex = 3;
+            this.mlBack.UseSelectable = true;
+            this.mlBack.Click += new System.EventHandler(this.mlBack_Click);
+            // 
             // ucCreatemh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.mlBack);
             this.Controls.Add(this.metroLabel1);
             this.Name = "ucCreatemh";
             this.Size = new System.Drawing.Size(702, 404);
@@ -57,5 +70,6 @@
         #endregion
 
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLink mlBack;
     }
 }
