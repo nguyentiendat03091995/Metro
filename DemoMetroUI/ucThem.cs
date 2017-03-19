@@ -37,12 +37,12 @@ namespace DemoMetroUI
 
         private void mtThemlop_Click(object sender, EventArgs e)
         {
-
+            MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         private void mtThemphong_Click(object sender, EventArgs e)
         {
-
+            MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         private void mtThemmh_Click(object sender, EventArgs e)

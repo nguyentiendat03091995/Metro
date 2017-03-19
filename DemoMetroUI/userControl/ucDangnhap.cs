@@ -41,5 +41,27 @@ namespace DemoMetroUI.userControl
             frMain.Instance.MetroContainer.Controls.Add(uc);
             frMain.Instance.MetroContainer.Controls["ucDangky"].BringToFront();
         }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                if (txtUsername.Text == "admin" && txtPassword.Text == "789789")
+                {
+                    ucDashboard uc = new ucDashboard();
+                    frMain.Instance.MetroContainer.Controls.Add(uc);
+                    frMain.Instance.MetroContainer.Controls["ucDashboard"].BringToFront();
+                }
+                else
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "User Name or Password was wron't !", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+            }
+        }
     }
 }

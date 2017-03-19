@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DemoMetroUI.userControl.lich;
 
 namespace DemoMetroUI
 {
@@ -27,6 +28,53 @@ namespace DemoMetroUI
             ucThem uc = new ucThem();
             frMain.Instance.MetroContainer.Controls.Add(uc);
             frMain.Instance.MetroContainer.Controls["ucThem"].BringToFront();
+        }
+
+        private void mtLich_Click(object sender, EventArgs e)
+        {
+            ucLichtong uc = new ucLichtong();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucLichtong"].BringToFront();
+        }
+
+        private void mtOffline_Click(object sender, EventArgs e)
+        {
+            MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void mtTheodoi_Click(object sender, EventArgs e)
+        {
+            MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void mtYkien_Click(object sender, EventArgs e)
+        {
+            MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void mtTimkiem_Click(object sender, EventArgs e)
+        {
+            MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void mtLapphieudiem_Click(object sender, EventArgs e)
+        {
+            MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void mtBaocao_Click(object sender, EventArgs e)
+        {
+            MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void mtImport_Click(object sender, EventArgs e)
+        {
+            MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
+
+        private void mtDanhgia_Click(object sender, EventArgs e)
+        {
+            MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
     }
 }

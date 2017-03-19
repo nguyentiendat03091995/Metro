@@ -88,6 +88,18 @@
     <Compile Include="userControl\giangVien\ucCreategv.Designer.cs">
       <DependentUpon>ucCreategv.cs</DependentUpon>
     </Compile>
+    <Compile Include="userControl\lich\ucLichcanhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\lich\ucLichcanhan.Designer.cs">
+      <DependentUpon>ucLichcanhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\lich\ucLichtong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\lich\ucLichtong.Designer.cs">
+      <DependentUpon>ucLichtong.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControl\monHoc\ucCreatemh.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -133,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\giangVien\ucCreategv.resx">
       <DependentUpon>ucCreategv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\lich\ucLichcanhan.resx">
+      <DependentUpon>ucLichcanhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\lich\ucLichtong.resx">
+      <DependentUpon>ucLichtong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\monHoc\ucCreatemh.resx">
       <DependentUpon>ucCreatemh.cs</DependentUpon>

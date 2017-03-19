@@ -31,7 +31,7 @@
             this.mtThem = new MetroFramework.Controls.MetroTile();
             this.mtTheodoi = new MetroFramework.Controls.MetroTile();
             this.mtYkien = new MetroFramework.Controls.MetroTile();
-            this.metroTile7 = new MetroFramework.Controls.MetroTile();
+            this.mtOffline = new MetroFramework.Controls.MetroTile();
             this.mtImport = new MetroFramework.Controls.MetroTile();
             this.mtBaocao = new MetroFramework.Controls.MetroTile();
             this.mtDanhgia = new MetroFramework.Controls.MetroTile();
@@ -61,6 +61,7 @@
             this.mtTheodoi.TabIndex = 0;
             this.mtTheodoi.Text = "Theo Dõi";
             this.mtTheodoi.UseSelectable = true;
+            this.mtTheodoi.Click += new System.EventHandler(this.mtTheodoi_Click);
             // 
             // mtYkien
             // 
@@ -72,16 +73,18 @@
             this.mtYkien.Text = "Ý Kiến SV";
             this.mtYkien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.mtYkien.UseSelectable = true;
+            this.mtYkien.Click += new System.EventHandler(this.mtYkien_Click);
             // 
-            // metroTile7
+            // mtOffline
             // 
-            this.metroTile7.ActiveControl = null;
-            this.metroTile7.Location = new System.Drawing.Point(246, 47);
-            this.metroTile7.Name = "metroTile7";
-            this.metroTile7.Size = new System.Drawing.Size(214, 90);
-            this.metroTile7.TabIndex = 0;
-            this.metroTile7.Text = "Chức Năng Offline";
-            this.metroTile7.UseSelectable = true;
+            this.mtOffline.ActiveControl = null;
+            this.mtOffline.Location = new System.Drawing.Point(246, 47);
+            this.mtOffline.Name = "mtOffline";
+            this.mtOffline.Size = new System.Drawing.Size(214, 90);
+            this.mtOffline.TabIndex = 0;
+            this.mtOffline.Text = "Chức Năng Offline";
+            this.mtOffline.UseSelectable = true;
+            this.mtOffline.Click += new System.EventHandler(this.mtOffline_Click);
             // 
             // mtImport
             // 
@@ -92,6 +95,7 @@
             this.mtImport.TabIndex = 0;
             this.mtImport.Text = "Import\r\nExport";
             this.mtImport.UseSelectable = true;
+            this.mtImport.Click += new System.EventHandler(this.mtImport_Click);
             // 
             // mtBaocao
             // 
@@ -102,6 +106,7 @@
             this.mtBaocao.TabIndex = 0;
             this.mtBaocao.Text = "Báo Cáo \r\nThống Kê";
             this.mtBaocao.UseSelectable = true;
+            this.mtBaocao.Click += new System.EventHandler(this.mtBaocao_Click);
             // 
             // mtDanhgia
             // 
@@ -112,6 +117,7 @@
             this.mtDanhgia.TabIndex = 0;
             this.mtDanhgia.Text = "Đánh Giá";
             this.mtDanhgia.UseSelectable = true;
+            this.mtDanhgia.Click += new System.EventHandler(this.mtDanhgia_Click);
             // 
             // mtTimkiem
             // 
@@ -122,6 +128,7 @@
             this.mtTimkiem.TabIndex = 0;
             this.mtTimkiem.Text = "Tìm Kiếm";
             this.mtTimkiem.UseSelectable = true;
+            this.mtTimkiem.Click += new System.EventHandler(this.mtTimkiem_Click);
             // 
             // mtLich
             // 
@@ -132,6 +139,7 @@
             this.mtLich.TabIndex = 0;
             this.mtLich.Text = "Lịch";
             this.mtLich.UseSelectable = true;
+            this.mtLich.Click += new System.EventHandler(this.mtLich_Click);
             // 
             // mtLapphieudiem
             // 
@@ -142,6 +150,7 @@
             this.mtLapphieudiem.TabIndex = 0;
             this.mtLapphieudiem.Text = "Lập Phiếu Điểm";
             this.mtLapphieudiem.UseSelectable = true;
+            this.mtLapphieudiem.Click += new System.EventHandler(this.mtLapphieudiem_Click);
             // 
             // ucDashboard
             // 
@@ -156,7 +165,7 @@
             this.Controls.Add(this.mtTheodoi);
             this.Controls.Add(this.mtLapphieudiem);
             this.Controls.Add(this.mtLich);
-            this.Controls.Add(this.metroTile7);
+            this.Controls.Add(this.mtOffline);
             this.Name = "ucDashboard";
             this.Size = new System.Drawing.Size(702, 404);
             this.Load += new System.EventHandler(this.ucDashboard_Load);
@@ -168,7 +177,7 @@
         private MetroFramework.Controls.MetroTile mtThem;
         private MetroFramework.Controls.MetroTile mtTheodoi;
         private MetroFramework.Controls.MetroTile mtYkien;
-        private MetroFramework.Controls.MetroTile metroTile7;
+        private MetroFramework.Controls.MetroTile mtOffline;
         private MetroFramework.Controls.MetroTile mtImport;
         private MetroFramework.Controls.MetroTile mtBaocao;
         private MetroFramework.Controls.MetroTile mtDanhgia;
