@@ -106,6 +106,12 @@
     <Compile Include="userControl\monHoc\ucCreatemh.Designer.cs">
       <DependentUpon>ucCreatemh.cs</DependentUpon>
     </Compile>
+    <Compile Include="userControl\search\ucSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\search\ucSearch.Designer.cs">
+      <DependentUpon>ucSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControl\sinhVien\ucCreatesv.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     <EmbeddedResource Include="userControl\monHoc\ucCreatemh.resx">
       <DependentUpon>ucCreatemh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="userControl\search\ucSearch.resx">
+      <DependentUpon>ucSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userControl\sinhVien\ucCreatesv.resx">
       <DependentUpon>ucCreatesv.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,7 +190,12 @@
   <ItemGroup>
     <None Include="Resources\1489502099_Previous_2.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

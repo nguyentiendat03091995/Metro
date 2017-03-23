@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DemoMetroUI.userControl.lich;
+using DemoMetroUI.userControl.search;
 
 namespace DemoMetroUI
 {
@@ -54,7 +55,10 @@ namespace DemoMetroUI
 
         private void mtTimkiem_Click(object sender, EventArgs e)
         {
-            MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            //MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            ucSearch uc = new ucSearch();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucSearch"].BringToFront();
         }
 
         private void mtLapphieudiem_Click(object sender, EventArgs e)
