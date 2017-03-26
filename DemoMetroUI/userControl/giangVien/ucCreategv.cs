@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DemoMetroUI;
+using System.Data.SqlClient;
 
 namespace DemoMetroUI.userControl.giangVien
 {
@@ -33,6 +34,7 @@ namespace DemoMetroUI.userControl.giangVien
         private void mtLuu_Click(object sender, EventArgs e)
         {
             MetroFramework.MetroMessageBox.Show(this,"Lưu thành công !!", "Successfully", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            //string sql = "insert into ";
         }
 
         private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)

@@ -21,5 +21,12 @@ namespace DemoMetroUI.userControl.lich
         {
 
         }
+
+        private void mlBack_Click(object sender, EventArgs e)
+        {
+            ucDashboard uc = new ucDashboard();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucDashboard"].BringToFront();
+        }
     }
 }

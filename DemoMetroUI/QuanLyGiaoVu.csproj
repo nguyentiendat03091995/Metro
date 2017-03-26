@@ -196,6 +196,12 @@
   <ItemGroup>
     <None Include="Resources\Search-icon %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="userControl\caHoc\" />
+    <Folder Include="userControl\chucVu\" />
+    <Folder Include="userControl\khoa\" />
+    <Folder Include="userControl\nganh\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
