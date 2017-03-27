@@ -34,7 +34,7 @@ namespace DemoMetroUI
             frMain.Instance.MetroContainer.Controls.Add(uc);
             frMain.Instance.MetroContainer.Controls["ucCreategv"].BringToFront();
         }
-
+        //cmit
         private void mtThemlop_Click(object sender, EventArgs e)
         {
             MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
