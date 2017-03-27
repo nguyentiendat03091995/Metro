@@ -33,6 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Metro">
       <HintPath>..\..\..\..\..\Desktop\Metro.dll</HintPath>
     </Reference>
@@ -50,7 +58,10 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +73,90 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\CA_HOC.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\CHUC_VU.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\GIANG_VIEN.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\GV_MH.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\HOC_KY.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\HOC_VI.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\KHOA.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\KHOA_HOC.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LOAI_MH.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LOP.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LUONGTHANG_GV.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MON_HOC.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NAM.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NGANH_HOC.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NH_MH.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PHANHOI_YKIEN.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PHONG_HOC.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\QLGiaoVuDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLGiaoVuDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\QLGiaoVuDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\QLGiaoVuDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLGiaoVuDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\QUYDOITIEN.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SINH_VIEN.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SV_MH.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\THANGLUONG.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\THOIKHOABIEU.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\TINHLUONG.cs">
+      <DependentUpon>QLGiaoVuDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +287,13 @@
     <EmbeddedResource Include="userControl\ucDangnhap.resx">
       <DependentUpon>ucDangnhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="DAL\QLGiaoVuDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLGiaoVuDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\QLGiaoVuDB.edmx.diagram">
+      <DependentUpon>QLGiaoVuDB.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -214,6 +316,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Search-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\QLGiaoVuDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLGiaoVuDB.edmx</DependentUpon>
+      <LastGenOutput>QLGiaoVuDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\QLGiaoVuDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLGiaoVuDB.edmx</DependentUpon>
+      <LastGenOutput>QLGiaoVuDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

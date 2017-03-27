@@ -1,0 +1,1533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QLHOCVUModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CA_HOC">
+          <Key>
+            <PropertyRef Name="MACH" />
+          </Key>
+          <Property Name="MACH" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENCA" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="SOTIET" Type="int" Nullable="false" />
+          <Property Name="THOIGIAN1TIET" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CHUC_VU">
+          <Key>
+            <PropertyRef Name="MACV" />
+          </Key>
+          <Property Name="MACV" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENCV" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="HESOPHUCAPCV" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GIANG_VIEN">
+          <Key>
+            <PropertyRef Name="IDGV" />
+          </Key>
+          <Property Name="IDGV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MAGV" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="TENGV" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="MAHV" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="MACV" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="NGAYSINH" Type="smalldatetime" Nullable="false" />
+          <Property Name="QUEQUAN" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="DIACHITAMCHU" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="EMAIL" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="GIOITINHGV" Type="bit" Nullable="false" />
+          <Property Name="SDTNGUOITHANGV" Type="char" MaxLength="20" />
+          <Property Name="CMND" Type="char" MaxLength="12" Nullable="false" />
+          <Property Name="TRANGTHAIGV" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="MAKHOA" Type="char" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="GV_MH">
+          <Key>
+            <PropertyRef Name="IDGV" />
+            <PropertyRef Name="IDMH" />
+          </Key>
+          <Property Name="IDGV" Type="int" Nullable="false" />
+          <Property Name="IDMH" Type="int" Nullable="false" />
+          <Property Name="NGAYBD" Type="smalldatetime" Nullable="false" />
+          <Property Name="NGANHDAY" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOC_KY">
+          <Key>
+            <PropertyRef Name="MAHK" />
+          </Key>
+          <Property Name="MAHK" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENHK" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOC_VI">
+          <Key>
+            <PropertyRef Name="MAHV" />
+          </Key>
+          <Property Name="MAHV" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENHV" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="HESOPHUCAPHOCVI" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KHOA">
+          <Key>
+            <PropertyRef Name="MAKHOA" />
+          </Key>
+          <Property Name="MAKHOA" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENKHOA" Type="nvarchar" MaxLength="40" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KHOA_HOC">
+          <Key>
+            <PropertyRef Name="MAKHOAHOC" />
+          </Key>
+          <Property Name="MAKHOAHOC" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENKHOA" Type="char" MaxLength="40" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LOAI_MH">
+          <Key>
+            <PropertyRef Name="MALMH" />
+          </Key>
+          <Property Name="MALMH" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENLMH" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LOP">
+          <Key>
+            <PropertyRef Name="IDLOP" />
+          </Key>
+          <Property Name="IDLOP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MALOP" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="TENLOP" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MAKHOA" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="CHUYENNGANH" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TRAITHAILOP" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="KHOAHOC" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LUONGTHANG_GV">
+          <Key>
+            <PropertyRef Name="IDGV" />
+            <PropertyRef Name="MATHANG" />
+            <PropertyRef Name="NAMGVTHUCHIEN" />
+          </Key>
+          <Property Name="IDGV" Type="int" Nullable="false" />
+          <Property Name="MATHANG" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="NAMGVTHUCHIEN" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="LUONGTONG" Type="money" />
+          <Property Name="TRANGTHAI" Type="char" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MON_HOC">
+          <Key>
+            <PropertyRef Name="IDMH" />
+          </Key>
+          <Property Name="IDMH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MAMH" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENMH" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="MOTA" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="NOIDUNG" Type="nvarchar" MaxLength="350" Nullable="false" />
+          <Property Name="YEUCAUMH" Type="nvarchar" MaxLength="50" />
+          <Property Name="MALMH" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TRANGTHAIMH" Type="char" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NAM">
+          <Key>
+            <PropertyRef Name="MANAM" />
+          </Key>
+          <Property Name="MANAM" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENNAM" Type="nvarchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NGANH_HOC">
+          <Key>
+            <PropertyRef Name="MANGANH" />
+          </Key>
+          <Property Name="MANGANH" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENNGANH" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NH_MH">
+          <Key>
+            <PropertyRef Name="IDMH" />
+            <PropertyRef Name="MANGANH" />
+          </Key>
+          <Property Name="IDMH" Type="int" Nullable="false" />
+          <Property Name="MANGANH" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="THELOAIMH" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PHANHOI_YKIEN">
+          <Key>
+            <PropertyRef Name="IDPH" />
+          </Key>
+          <Property Name="IDPH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MAPH" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENPH" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="NOIDUNGPH" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="NGUOIPH" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="NGUOITLPH" Type="char" MaxLength="5" />
+          <Property Name="NGAYGIONEUPH" Type="smalldatetime" />
+          <Property Name="NGAYGIOTLPH" Type="smalldatetime" />
+          <Property Name="TRANGTHAIPH" Type="char" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PHONG_HOC">
+          <Key>
+            <PropertyRef Name="MAPHONG" />
+          </Key>
+          <Property Name="MAPHONG" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENPHONG" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="TRANGTHAIPH" Type="char" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QUYDOITIEN">
+          <Key>
+            <PropertyRef Name="MAQD" />
+          </Key>
+          <Property Name="MAQD" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENQD" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="SOTIETQD" Type="money" />
+        </EntityType>
+        <EntityType Name="SINH_VIEN">
+          <Key>
+            <PropertyRef Name="IDSV" />
+          </Key>
+          <Property Name="IDSV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MASV" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="TENSV" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CMND" Type="char" MaxLength="12" Nullable="false" />
+          <Property Name="NGAYSINH" Type="smalldatetime" Nullable="false" />
+          <Property Name="QUEQUANSV" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="DIEMSV" Type="float" />
+          <Property Name="SVKHOAHOC" Type="char" MaxLength="2" />
+          <Property Name="DIACHITHUONGCHU" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="SDT" Type="char" MaxLength="11" Nullable="false" />
+          <Property Name="GIOITINH" Type="bit" Nullable="false" />
+          <Property Name="SDTNGUOITHANSV" Type="char" MaxLength="11" Nullable="false" />
+          <Property Name="EMAIL" Type="char" MaxLength="50" />
+          <Property Name="IDLOP" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SV_MH">
+          <Key>
+            <PropertyRef Name="IDSV" />
+            <PropertyRef Name="IDMH" />
+          </Key>
+          <Property Name="IDSV" Type="int" Nullable="false" />
+          <Property Name="IDMH" Type="int" Nullable="false" />
+          <Property Name="DIEMMH" Type="float" />
+          <Property Name="HKTHUCHIEN" Type="char" MaxLength="4" />
+          <Property Name="NAMTHUCHIEN" Type="char" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="THANGLUONG">
+          <Key>
+            <PropertyRef Name="MATHANG" />
+          </Key>
+          <Property Name="MATHANG" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="TENTHANG" Type="nchar" MaxLength="35" Nullable="false" />
+          <Property Name="SOTIETTOIDA" Type="int" />
+          <Property Name="SOTIETTOITHIEU" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="THOIKHOABIEU">
+          <Key>
+            <PropertyRef Name="MACH" />
+            <PropertyRef Name="IDGV" />
+            <PropertyRef Name="IDMH" />
+            <PropertyRef Name="IDLOP" />
+            <PropertyRef Name="MAPHONG" />
+          </Key>
+          <Property Name="MACH" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="IDGV" Type="int" Nullable="false" />
+          <Property Name="IDMH" Type="int" Nullable="false" />
+          <Property Name="IDLOP" Type="int" Nullable="false" />
+          <Property Name="MAPHONG" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="NGAYHOC" Type="date" />
+          <Property Name="GIOBD" Type="time" Precision="7" />
+          <Property Name="GIOKT" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="TINHLUONG">
+          <Key>
+            <PropertyRef Name="IDGV" />
+            <PropertyRef Name="IDMH" />
+          </Key>
+          <Property Name="IDGV" Type="int" Nullable="false" />
+          <Property Name="IDMH" Type="int" Nullable="false" />
+          <Property Name="SOTIET" Type="int" Nullable="false" />
+          <Property Name="SOTIENQUYDOI" Type="money" />
+        </EntityType>
+        <Association Name="FK__GIANG_VIE__MAKHO__5535A963">
+          <End Role="KHOA" Type="Self.KHOA" Multiplicity="0..1" />
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHOA">
+              <PropertyRef Name="MAKHOA" />
+            </Principal>
+            <Dependent Role="GIANG_VIEN">
+              <PropertyRef Name="MAKHOA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GIANG_VIEN__MACV__534D60F1">
+          <End Role="CHUC_VU" Type="Self.CHUC_VU" Multiplicity="1" />
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUC_VU">
+              <PropertyRef Name="MACV" />
+            </Principal>
+            <Dependent Role="GIANG_VIEN">
+              <PropertyRef Name="MACV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GIANG_VIEN__MAHV__52593CB8">
+          <End Role="HOC_VI" Type="Self.HOC_VI" Multiplicity="1" />
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HOC_VI">
+              <PropertyRef Name="MAHV" />
+            </Principal>
+            <Dependent Role="GIANG_VIEN">
+              <PropertyRef Name="MAHV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GV_MH__IDGV__4222D4EF">
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="1" />
+          <End Role="GV_MH" Type="Self.GV_MH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GIANG_VIEN">
+              <PropertyRef Name="IDGV" />
+            </Principal>
+            <Dependent Role="GV_MH">
+              <PropertyRef Name="IDGV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GV_MH__IDMH__46E78A0C">
+          <End Role="MON_HOC" Type="Self.MON_HOC" Multiplicity="1" />
+          <End Role="GV_MH" Type="Self.GV_MH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MON_HOC">
+              <PropertyRef Name="IDMH" />
+            </Principal>
+            <Dependent Role="GV_MH">
+              <PropertyRef Name="IDMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LOP__MAKHOA__4F7CD00D">
+          <End Role="KHOA" Type="Self.KHOA" Multiplicity="1" />
+          <End Role="LOP" Type="Self.LOP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHOA">
+              <PropertyRef Name="MAKHOA" />
+            </Principal>
+            <Dependent Role="LOP">
+              <PropertyRef Name="MAKHOA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LUONGTHAN__MATHA__5441852A">
+          <End Role="THANGLUONG" Type="Self.THANGLUONG" Multiplicity="1" />
+          <End Role="LUONGTHANG_GV" Type="Self.LUONGTHANG_GV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THANGLUONG">
+              <PropertyRef Name="MATHANG" />
+            </Principal>
+            <Dependent Role="LUONGTHANG_GV">
+              <PropertyRef Name="MATHANG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LUONGTHANG__IDGV__44FF419A">
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="1" />
+          <End Role="LUONGTHANG_GV" Type="Self.LUONGTHANG_GV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GIANG_VIEN">
+              <PropertyRef Name="IDGV" />
+            </Principal>
+            <Dependent Role="LUONGTHANG_GV">
+              <PropertyRef Name="IDGV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MON_HOC__MALMH__4CA06362">
+          <End Role="LOAI_MH" Type="Self.LOAI_MH" Multiplicity="1" />
+          <End Role="MON_HOC" Type="Self.MON_HOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOAI_MH">
+              <PropertyRef Name="MALMH" />
+            </Principal>
+            <Dependent Role="MON_HOC">
+              <PropertyRef Name="MALMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NH_MH__IDMH__48CFD27E">
+          <End Role="MON_HOC" Type="Self.MON_HOC" Multiplicity="1" />
+          <End Role="NH_MH" Type="Self.NH_MH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MON_HOC">
+              <PropertyRef Name="IDMH" />
+            </Principal>
+            <Dependent Role="NH_MH">
+              <PropertyRef Name="IDMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NH_MH__MANGANH__4BAC3F29">
+          <End Role="NGANH_HOC" Type="Self.NGANH_HOC" Multiplicity="1" />
+          <End Role="NH_MH" Type="Self.NH_MH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGANH_HOC">
+              <PropertyRef Name="MANGANH" />
+            </Principal>
+            <Dependent Role="NH_MH">
+              <PropertyRef Name="MANGANH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SINH_VIEN__IDLOP__4D94879B">
+          <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+          <End Role="SINH_VIEN" Type="Self.SINH_VIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="IDLOP" />
+            </Principal>
+            <Dependent Role="SINH_VIEN">
+              <PropertyRef Name="IDLOP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SV_MH__IDMH__47DBAE45">
+          <End Role="MON_HOC" Type="Self.MON_HOC" Multiplicity="1" />
+          <End Role="SV_MH" Type="Self.SV_MH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MON_HOC">
+              <PropertyRef Name="IDMH" />
+            </Principal>
+            <Dependent Role="SV_MH">
+              <PropertyRef Name="IDMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SV_MH__IDSV__45F365D3">
+          <End Role="SINH_VIEN" Type="Self.SINH_VIEN" Multiplicity="1" />
+          <End Role="SV_MH" Type="Self.SV_MH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SINH_VIEN">
+              <PropertyRef Name="IDSV" />
+            </Principal>
+            <Dependent Role="SV_MH">
+              <PropertyRef Name="IDSV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THOIKHOAB__IDLOP__4E88ABD4">
+          <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="IDLOP" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="IDLOP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THOIKHOAB__MAPHO__5070F446">
+          <End Role="PHONG_HOC" Type="Self.PHONG_HOC" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG_HOC">
+              <PropertyRef Name="MAPHONG" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="MAPHONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THOIKHOABI__IDGV__4316F928">
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GIANG_VIEN">
+              <PropertyRef Name="IDGV" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="IDGV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THOIKHOABI__IDMH__49C3F6B7">
+          <End Role="MON_HOC" Type="Self.MON_HOC" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MON_HOC">
+              <PropertyRef Name="IDMH" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="IDMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THOIKHOABI__MACH__5165187F">
+          <End Role="CA_HOC" Type="Self.CA_HOC" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CA_HOC">
+              <PropertyRef Name="MACH" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="MACH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TINHLUONG__IDGV__440B1D61">
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="1" />
+          <End Role="TINHLUONG" Type="Self.TINHLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GIANG_VIEN">
+              <PropertyRef Name="IDGV" />
+            </Principal>
+            <Dependent Role="TINHLUONG">
+              <PropertyRef Name="IDGV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TINHLUONG__IDMH__4AB81AF0">
+          <End Role="MON_HOC" Type="Self.MON_HOC" Multiplicity="1" />
+          <End Role="TINHLUONG" Type="Self.TINHLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MON_HOC">
+              <PropertyRef Name="IDMH" />
+            </Principal>
+            <Dependent Role="TINHLUONG">
+              <PropertyRef Name="IDMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLHOCVUModelStoreContainer">
+          <EntitySet Name="CA_HOC" EntityType="Self.CA_HOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CHUC_VU" EntityType="Self.CHUC_VU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GIANG_VIEN" EntityType="Self.GIANG_VIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GV_MH" EntityType="Self.GV_MH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOC_KY" EntityType="Self.HOC_KY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOC_VI" EntityType="Self.HOC_VI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KHOA" EntityType="Self.KHOA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KHOA_HOC" EntityType="Self.KHOA_HOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOAI_MH" EntityType="Self.LOAI_MH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOP" EntityType="Self.LOP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LUONGTHANG_GV" EntityType="Self.LUONGTHANG_GV" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MON_HOC" EntityType="Self.MON_HOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NAM" EntityType="Self.NAM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NGANH_HOC" EntityType="Self.NGANH_HOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NH_MH" EntityType="Self.NH_MH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PHANHOI_YKIEN" EntityType="Self.PHANHOI_YKIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PHONG_HOC" EntityType="Self.PHONG_HOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QUYDOITIEN" EntityType="Self.QUYDOITIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SINH_VIEN" EntityType="Self.SINH_VIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SV_MH" EntityType="Self.SV_MH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THANGLUONG" EntityType="Self.THANGLUONG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THOIKHOABIEU" EntityType="Self.THOIKHOABIEU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TINHLUONG" EntityType="Self.TINHLUONG" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__GIANG_VIE__MAKHO__5535A963" Association="Self.FK__GIANG_VIE__MAKHO__5535A963">
+            <End Role="KHOA" EntitySet="KHOA" />
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GIANG_VIEN__MACV__534D60F1" Association="Self.FK__GIANG_VIEN__MACV__534D60F1">
+            <End Role="CHUC_VU" EntitySet="CHUC_VU" />
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GIANG_VIEN__MAHV__52593CB8" Association="Self.FK__GIANG_VIEN__MAHV__52593CB8">
+            <End Role="HOC_VI" EntitySet="HOC_VI" />
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GV_MH__IDGV__4222D4EF" Association="Self.FK__GV_MH__IDGV__4222D4EF">
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+            <End Role="GV_MH" EntitySet="GV_MH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GV_MH__IDMH__46E78A0C" Association="Self.FK__GV_MH__IDMH__46E78A0C">
+            <End Role="MON_HOC" EntitySet="MON_HOC" />
+            <End Role="GV_MH" EntitySet="GV_MH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LOP__MAKHOA__4F7CD00D" Association="Self.FK__LOP__MAKHOA__4F7CD00D">
+            <End Role="KHOA" EntitySet="KHOA" />
+            <End Role="LOP" EntitySet="LOP" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LUONGTHAN__MATHA__5441852A" Association="Self.FK__LUONGTHAN__MATHA__5441852A">
+            <End Role="THANGLUONG" EntitySet="THANGLUONG" />
+            <End Role="LUONGTHANG_GV" EntitySet="LUONGTHANG_GV" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LUONGTHANG__IDGV__44FF419A" Association="Self.FK__LUONGTHANG__IDGV__44FF419A">
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+            <End Role="LUONGTHANG_GV" EntitySet="LUONGTHANG_GV" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MON_HOC__MALMH__4CA06362" Association="Self.FK__MON_HOC__MALMH__4CA06362">
+            <End Role="LOAI_MH" EntitySet="LOAI_MH" />
+            <End Role="MON_HOC" EntitySet="MON_HOC" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NH_MH__IDMH__48CFD27E" Association="Self.FK__NH_MH__IDMH__48CFD27E">
+            <End Role="MON_HOC" EntitySet="MON_HOC" />
+            <End Role="NH_MH" EntitySet="NH_MH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NH_MH__MANGANH__4BAC3F29" Association="Self.FK__NH_MH__MANGANH__4BAC3F29">
+            <End Role="NGANH_HOC" EntitySet="NGANH_HOC" />
+            <End Role="NH_MH" EntitySet="NH_MH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SINH_VIEN__IDLOP__4D94879B" Association="Self.FK__SINH_VIEN__IDLOP__4D94879B">
+            <End Role="LOP" EntitySet="LOP" />
+            <End Role="SINH_VIEN" EntitySet="SINH_VIEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SV_MH__IDMH__47DBAE45" Association="Self.FK__SV_MH__IDMH__47DBAE45">
+            <End Role="MON_HOC" EntitySet="MON_HOC" />
+            <End Role="SV_MH" EntitySet="SV_MH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SV_MH__IDSV__45F365D3" Association="Self.FK__SV_MH__IDSV__45F365D3">
+            <End Role="SINH_VIEN" EntitySet="SINH_VIEN" />
+            <End Role="SV_MH" EntitySet="SV_MH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THOIKHOAB__IDLOP__4E88ABD4" Association="Self.FK__THOIKHOAB__IDLOP__4E88ABD4">
+            <End Role="LOP" EntitySet="LOP" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THOIKHOAB__MAPHO__5070F446" Association="Self.FK__THOIKHOAB__MAPHO__5070F446">
+            <End Role="PHONG_HOC" EntitySet="PHONG_HOC" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THOIKHOABI__IDGV__4316F928" Association="Self.FK__THOIKHOABI__IDGV__4316F928">
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THOIKHOABI__IDMH__49C3F6B7" Association="Self.FK__THOIKHOABI__IDMH__49C3F6B7">
+            <End Role="MON_HOC" EntitySet="MON_HOC" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THOIKHOABI__MACH__5165187F" Association="Self.FK__THOIKHOABI__MACH__5165187F">
+            <End Role="CA_HOC" EntitySet="CA_HOC" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TINHLUONG__IDGV__440B1D61" Association="Self.FK__TINHLUONG__IDGV__440B1D61">
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+            <End Role="TINHLUONG" EntitySet="TINHLUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TINHLUONG__IDMH__4AB81AF0" Association="Self.FK__TINHLUONG__IDMH__4AB81AF0">
+            <End Role="MON_HOC" EntitySet="MON_HOC" />
+            <End Role="TINHLUONG" EntitySet="TINHLUONG" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QLHOCVUModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CA_HOC">
+          <Key>
+            <PropertyRef Name="MACH" />
+          </Key>
+          <Property Name="MACH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENCA" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SOTIET" Type="Int32" Nullable="false" />
+          <Property Name="THOIGIAN1TIET" Type="Double" Nullable="false" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK__THOIKHOABI__MACH__5165187F" FromRole="CA_HOC" ToRole="THOIKHOABIEU" />
+        </EntityType>
+        <EntityType Name="CHUC_VU">
+          <Key>
+            <PropertyRef Name="MACV" />
+          </Key>
+          <Property Name="MACV" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENCV" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HESOPHUCAPCV" Type="Double" Nullable="false" />
+          <NavigationProperty Name="GIANG_VIEN" Relationship="Self.FK__GIANG_VIEN__MACV__534D60F1" FromRole="CHUC_VU" ToRole="GIANG_VIEN" />
+        </EntityType>
+        <EntityType Name="GIANG_VIEN">
+          <Key>
+            <PropertyRef Name="IDGV" />
+          </Key>
+          <Property Name="IDGV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MAGV" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENGV" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MAHV" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MACV" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NGAYSINH" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="QUEQUAN" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DIACHITAMCHU" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="GIOITINHGV" Type="Boolean" Nullable="false" />
+          <Property Name="SDTNGUOITHANGV" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="CMND" Type="String" MaxLength="12" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TRANGTHAIGV" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MAKHOA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="CHUC_VU" Relationship="Self.FK__GIANG_VIEN__MACV__534D60F1" FromRole="GIANG_VIEN" ToRole="CHUC_VU" />
+          <NavigationProperty Name="KHOA" Relationship="Self.FK__GIANG_VIE__MAKHO__5535A963" FromRole="GIANG_VIEN" ToRole="KHOA" />
+          <NavigationProperty Name="HOC_VI" Relationship="Self.FK__GIANG_VIEN__MAHV__52593CB8" FromRole="GIANG_VIEN" ToRole="HOC_VI" />
+          <NavigationProperty Name="GV_MH" Relationship="Self.FK__GV_MH__IDGV__4222D4EF" FromRole="GIANG_VIEN" ToRole="GV_MH" />
+          <NavigationProperty Name="LUONGTHANG_GV" Relationship="Self.FK__LUONGTHANG__IDGV__44FF419A" FromRole="GIANG_VIEN" ToRole="LUONGTHANG_GV" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK__THOIKHOABI__IDGV__4316F928" FromRole="GIANG_VIEN" ToRole="THOIKHOABIEU" />
+          <NavigationProperty Name="TINHLUONGs" Relationship="Self.FK__TINHLUONG__IDGV__440B1D61" FromRole="GIANG_VIEN" ToRole="TINHLUONG" />
+        </EntityType>
+        <EntityType Name="GV_MH">
+          <Key>
+            <PropertyRef Name="IDGV" />
+            <PropertyRef Name="IDMH" />
+          </Key>
+          <Property Name="IDGV" Type="Int32" Nullable="false" />
+          <Property Name="IDMH" Type="Int32" Nullable="false" />
+          <Property Name="NGAYBD" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="NGANHDAY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="GIANG_VIEN" Relationship="Self.FK__GV_MH__IDGV__4222D4EF" FromRole="GV_MH" ToRole="GIANG_VIEN" />
+          <NavigationProperty Name="MON_HOC" Relationship="Self.FK__GV_MH__IDMH__46E78A0C" FromRole="GV_MH" ToRole="MON_HOC" />
+        </EntityType>
+        <EntityType Name="HOC_KY">
+          <Key>
+            <PropertyRef Name="MAHK" />
+          </Key>
+          <Property Name="MAHK" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENHK" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOC_VI">
+          <Key>
+            <PropertyRef Name="MAHV" />
+          </Key>
+          <Property Name="MAHV" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENHV" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HESOPHUCAPHOCVI" Type="Double" Nullable="false" />
+          <NavigationProperty Name="GIANG_VIEN" Relationship="Self.FK__GIANG_VIEN__MAHV__52593CB8" FromRole="HOC_VI" ToRole="GIANG_VIEN" />
+        </EntityType>
+        <EntityType Name="KHOA">
+          <Key>
+            <PropertyRef Name="MAKHOA" />
+          </Key>
+          <Property Name="MAKHOA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENKHOA" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="GIANG_VIEN" Relationship="Self.FK__GIANG_VIE__MAKHO__5535A963" FromRole="KHOA" ToRole="GIANG_VIEN" />
+          <NavigationProperty Name="LOPs" Relationship="Self.FK__LOP__MAKHOA__4F7CD00D" FromRole="KHOA" ToRole="LOP" />
+        </EntityType>
+        <EntityType Name="KHOA_HOC">
+          <Key>
+            <PropertyRef Name="MAKHOAHOC" />
+          </Key>
+          <Property Name="MAKHOAHOC" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENKHOA" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LOAI_MH">
+          <Key>
+            <PropertyRef Name="MALMH" />
+          </Key>
+          <Property Name="MALMH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENLMH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="MON_HOC" Relationship="Self.FK__MON_HOC__MALMH__4CA06362" FromRole="LOAI_MH" ToRole="MON_HOC" />
+        </EntityType>
+        <EntityType Name="LOP">
+          <Key>
+            <PropertyRef Name="IDLOP" />
+          </Key>
+          <Property Name="IDLOP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MALOP" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENLOP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MAKHOA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="CHUYENNGANH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TRAITHAILOP" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="KHOAHOC" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="KHOA" Relationship="Self.FK__LOP__MAKHOA__4F7CD00D" FromRole="LOP" ToRole="KHOA" />
+          <NavigationProperty Name="SINH_VIEN" Relationship="Self.FK__SINH_VIEN__IDLOP__4D94879B" FromRole="LOP" ToRole="SINH_VIEN" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK__THOIKHOAB__IDLOP__4E88ABD4" FromRole="LOP" ToRole="THOIKHOABIEU" />
+        </EntityType>
+        <EntityType Name="LUONGTHANG_GV">
+          <Key>
+            <PropertyRef Name="IDGV" />
+            <PropertyRef Name="MATHANG" />
+            <PropertyRef Name="NAMGVTHUCHIEN" />
+          </Key>
+          <Property Name="IDGV" Type="Int32" Nullable="false" />
+          <Property Name="MATHANG" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NAMGVTHUCHIEN" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="LUONGTONG" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TRANGTHAI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="GIANG_VIEN" Relationship="Self.FK__LUONGTHANG__IDGV__44FF419A" FromRole="LUONGTHANG_GV" ToRole="GIANG_VIEN" />
+          <NavigationProperty Name="THANGLUONG" Relationship="Self.FK__LUONGTHAN__MATHA__5441852A" FromRole="LUONGTHANG_GV" ToRole="THANGLUONG" />
+        </EntityType>
+        <EntityType Name="MON_HOC">
+          <Key>
+            <PropertyRef Name="IDMH" />
+          </Key>
+          <Property Name="IDMH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MAMH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENMH" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="MOTA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NOIDUNG" Type="String" MaxLength="350" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="YEUCAUMH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MALMH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TRANGTHAIMH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="GV_MH" Relationship="Self.FK__GV_MH__IDMH__46E78A0C" FromRole="MON_HOC" ToRole="GV_MH" />
+          <NavigationProperty Name="LOAI_MH" Relationship="Self.FK__MON_HOC__MALMH__4CA06362" FromRole="MON_HOC" ToRole="LOAI_MH" />
+          <NavigationProperty Name="NH_MH" Relationship="Self.FK__NH_MH__IDMH__48CFD27E" FromRole="MON_HOC" ToRole="NH_MH" />
+          <NavigationProperty Name="SV_MH" Relationship="Self.FK__SV_MH__IDMH__47DBAE45" FromRole="MON_HOC" ToRole="SV_MH" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK__THOIKHOABI__IDMH__49C3F6B7" FromRole="MON_HOC" ToRole="THOIKHOABIEU" />
+          <NavigationProperty Name="TINHLUONGs" Relationship="Self.FK__TINHLUONG__IDMH__4AB81AF0" FromRole="MON_HOC" ToRole="TINHLUONG" />
+        </EntityType>
+        <EntityType Name="NAM">
+          <Key>
+            <PropertyRef Name="MANAM" />
+          </Key>
+          <Property Name="MANAM" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENNAM" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NGANH_HOC">
+          <Key>
+            <PropertyRef Name="MANGANH" />
+          </Key>
+          <Property Name="MANGANH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENNGANH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="NH_MH" Relationship="Self.FK__NH_MH__MANGANH__4BAC3F29" FromRole="NGANH_HOC" ToRole="NH_MH" />
+        </EntityType>
+        <EntityType Name="NH_MH">
+          <Key>
+            <PropertyRef Name="IDMH" />
+            <PropertyRef Name="MANGANH" />
+          </Key>
+          <Property Name="IDMH" Type="Int32" Nullable="false" />
+          <Property Name="MANGANH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="THELOAIMH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="MON_HOC" Relationship="Self.FK__NH_MH__IDMH__48CFD27E" FromRole="NH_MH" ToRole="MON_HOC" />
+          <NavigationProperty Name="NGANH_HOC" Relationship="Self.FK__NH_MH__MANGANH__4BAC3F29" FromRole="NH_MH" ToRole="NGANH_HOC" />
+        </EntityType>
+        <EntityType Name="PHANHOI_YKIEN">
+          <Key>
+            <PropertyRef Name="IDPH" />
+          </Key>
+          <Property Name="IDPH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MAPH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENPH" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NOIDUNGPH" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NGUOIPH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NGUOITLPH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="NGAYGIONEUPH" Type="DateTime" Precision="0" />
+          <Property Name="NGAYGIOTLPH" Type="DateTime" Precision="0" />
+          <Property Name="TRANGTHAIPH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PHONG_HOC">
+          <Key>
+            <PropertyRef Name="MAPHONG" />
+          </Key>
+          <Property Name="MAPHONG" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENPHONG" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TRANGTHAIPH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK__THOIKHOAB__MAPHO__5070F446" FromRole="PHONG_HOC" ToRole="THOIKHOABIEU" />
+        </EntityType>
+        <EntityType Name="QUYDOITIEN">
+          <Key>
+            <PropertyRef Name="MAQD" />
+          </Key>
+          <Property Name="MAQD" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENQD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SOTIETQD" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="SINH_VIEN">
+          <Key>
+            <PropertyRef Name="IDSV" />
+          </Key>
+          <Property Name="IDSV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MASV" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENSV" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CMND" Type="String" MaxLength="12" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NGAYSINH" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="QUEQUANSV" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DIEMSV" Type="Double" />
+          <Property Name="SVKHOAHOC" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="DIACHITHUONGCHU" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SDT" Type="String" MaxLength="11" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="GIOITINH" Type="Boolean" Nullable="false" />
+          <Property Name="SDTNGUOITHANSV" Type="String" MaxLength="11" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="IDLOP" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="LOP" Relationship="Self.FK__SINH_VIEN__IDLOP__4D94879B" FromRole="SINH_VIEN" ToRole="LOP" />
+          <NavigationProperty Name="SV_MH" Relationship="Self.FK__SV_MH__IDSV__45F365D3" FromRole="SINH_VIEN" ToRole="SV_MH" />
+        </EntityType>
+        <EntityType Name="SV_MH">
+          <Key>
+            <PropertyRef Name="IDSV" />
+            <PropertyRef Name="IDMH" />
+          </Key>
+          <Property Name="IDSV" Type="Int32" Nullable="false" />
+          <Property Name="IDMH" Type="Int32" Nullable="false" />
+          <Property Name="DIEMMH" Type="Double" />
+          <Property Name="HKTHUCHIEN" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="NAMTHUCHIEN" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="MON_HOC" Relationship="Self.FK__SV_MH__IDMH__47DBAE45" FromRole="SV_MH" ToRole="MON_HOC" />
+          <NavigationProperty Name="SINH_VIEN" Relationship="Self.FK__SV_MH__IDSV__45F365D3" FromRole="SV_MH" ToRole="SINH_VIEN" />
+        </EntityType>
+        <EntityType Name="THANGLUONG">
+          <Key>
+            <PropertyRef Name="MATHANG" />
+          </Key>
+          <Property Name="MATHANG" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="TENTHANG" Type="String" MaxLength="35" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="SOTIETTOIDA" Type="Int32" />
+          <Property Name="SOTIETTOITHIEU" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="LUONGTHANG_GV" Relationship="Self.FK__LUONGTHAN__MATHA__5441852A" FromRole="THANGLUONG" ToRole="LUONGTHANG_GV" />
+        </EntityType>
+        <EntityType Name="THOIKHOABIEU">
+          <Key>
+            <PropertyRef Name="MACH" />
+            <PropertyRef Name="IDGV" />
+            <PropertyRef Name="IDMH" />
+            <PropertyRef Name="IDLOP" />
+            <PropertyRef Name="MAPHONG" />
+          </Key>
+          <Property Name="MACH" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="IDGV" Type="Int32" Nullable="false" />
+          <Property Name="IDMH" Type="Int32" Nullable="false" />
+          <Property Name="IDLOP" Type="Int32" Nullable="false" />
+          <Property Name="MAPHONG" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NGAYHOC" Type="DateTime" Precision="0" />
+          <Property Name="GIOBD" Type="Time" Precision="7" />
+          <Property Name="GIOKT" Type="Time" Precision="7" />
+          <NavigationProperty Name="CA_HOC" Relationship="Self.FK__THOIKHOABI__MACH__5165187F" FromRole="THOIKHOABIEU" ToRole="CA_HOC" />
+          <NavigationProperty Name="GIANG_VIEN" Relationship="Self.FK__THOIKHOABI__IDGV__4316F928" FromRole="THOIKHOABIEU" ToRole="GIANG_VIEN" />
+          <NavigationProperty Name="LOP" Relationship="Self.FK__THOIKHOAB__IDLOP__4E88ABD4" FromRole="THOIKHOABIEU" ToRole="LOP" />
+          <NavigationProperty Name="MON_HOC" Relationship="Self.FK__THOIKHOABI__IDMH__49C3F6B7" FromRole="THOIKHOABIEU" ToRole="MON_HOC" />
+          <NavigationProperty Name="PHONG_HOC" Relationship="Self.FK__THOIKHOAB__MAPHO__5070F446" FromRole="THOIKHOABIEU" ToRole="PHONG_HOC" />
+        </EntityType>
+        <EntityType Name="TINHLUONG">
+          <Key>
+            <PropertyRef Name="IDGV" />
+            <PropertyRef Name="IDMH" />
+          </Key>
+          <Property Name="IDGV" Type="Int32" Nullable="false" />
+          <Property Name="IDMH" Type="Int32" Nullable="false" />
+          <Property Name="SOTIET" Type="Int32" Nullable="false" />
+          <Property Name="SOTIENQUYDOI" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="GIANG_VIEN" Relationship="Self.FK__TINHLUONG__IDGV__440B1D61" FromRole="TINHLUONG" ToRole="GIANG_VIEN" />
+          <NavigationProperty Name="MON_HOC" Relationship="Self.FK__TINHLUONG__IDMH__4AB81AF0" FromRole="TINHLUONG" ToRole="MON_HOC" />
+        </EntityType>
+        <Association Name="FK__THOIKHOABI__MACH__5165187F">
+          <End Role="CA_HOC" Type="Self.CA_HOC" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CA_HOC">
+              <PropertyRef Name="MACH" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="MACH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GIANG_VIEN__MACV__534D60F1">
+          <End Role="CHUC_VU" Type="Self.CHUC_VU" Multiplicity="1" />
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CHUC_VU">
+              <PropertyRef Name="MACV" />
+            </Principal>
+            <Dependent Role="GIANG_VIEN">
+              <PropertyRef Name="MACV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GIANG_VIE__MAKHO__5535A963">
+          <End Role="KHOA" Type="Self.KHOA" Multiplicity="0..1" />
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHOA">
+              <PropertyRef Name="MAKHOA" />
+            </Principal>
+            <Dependent Role="GIANG_VIEN">
+              <PropertyRef Name="MAKHOA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GIANG_VIEN__MAHV__52593CB8">
+          <End Role="HOC_VI" Type="Self.HOC_VI" Multiplicity="1" />
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HOC_VI">
+              <PropertyRef Name="MAHV" />
+            </Principal>
+            <Dependent Role="GIANG_VIEN">
+              <PropertyRef Name="MAHV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GV_MH__IDGV__4222D4EF">
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="1" />
+          <End Role="GV_MH" Type="Self.GV_MH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GIANG_VIEN">
+              <PropertyRef Name="IDGV" />
+            </Principal>
+            <Dependent Role="GV_MH">
+              <PropertyRef Name="IDGV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LUONGTHANG__IDGV__44FF419A">
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="1" />
+          <End Role="LUONGTHANG_GV" Type="Self.LUONGTHANG_GV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GIANG_VIEN">
+              <PropertyRef Name="IDGV" />
+            </Principal>
+            <Dependent Role="LUONGTHANG_GV">
+              <PropertyRef Name="IDGV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THOIKHOABI__IDGV__4316F928">
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GIANG_VIEN">
+              <PropertyRef Name="IDGV" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="IDGV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TINHLUONG__IDGV__440B1D61">
+          <End Role="GIANG_VIEN" Type="Self.GIANG_VIEN" Multiplicity="1" />
+          <End Role="TINHLUONG" Type="Self.TINHLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GIANG_VIEN">
+              <PropertyRef Name="IDGV" />
+            </Principal>
+            <Dependent Role="TINHLUONG">
+              <PropertyRef Name="IDGV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__GV_MH__IDMH__46E78A0C">
+          <End Role="MON_HOC" Type="Self.MON_HOC" Multiplicity="1" />
+          <End Role="GV_MH" Type="Self.GV_MH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MON_HOC">
+              <PropertyRef Name="IDMH" />
+            </Principal>
+            <Dependent Role="GV_MH">
+              <PropertyRef Name="IDMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LOP__MAKHOA__4F7CD00D">
+          <End Role="KHOA" Type="Self.KHOA" Multiplicity="1" />
+          <End Role="LOP" Type="Self.LOP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHOA">
+              <PropertyRef Name="MAKHOA" />
+            </Principal>
+            <Dependent Role="LOP">
+              <PropertyRef Name="MAKHOA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MON_HOC__MALMH__4CA06362">
+          <End Role="LOAI_MH" Type="Self.LOAI_MH" Multiplicity="1" />
+          <End Role="MON_HOC" Type="Self.MON_HOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOAI_MH">
+              <PropertyRef Name="MALMH" />
+            </Principal>
+            <Dependent Role="MON_HOC">
+              <PropertyRef Name="MALMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SINH_VIEN__IDLOP__4D94879B">
+          <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+          <End Role="SINH_VIEN" Type="Self.SINH_VIEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="IDLOP" />
+            </Principal>
+            <Dependent Role="SINH_VIEN">
+              <PropertyRef Name="IDLOP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THOIKHOAB__IDLOP__4E88ABD4">
+          <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="IDLOP" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="IDLOP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LUONGTHAN__MATHA__5441852A">
+          <End Role="THANGLUONG" Type="Self.THANGLUONG" Multiplicity="1" />
+          <End Role="LUONGTHANG_GV" Type="Self.LUONGTHANG_GV" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="THANGLUONG">
+              <PropertyRef Name="MATHANG" />
+            </Principal>
+            <Dependent Role="LUONGTHANG_GV">
+              <PropertyRef Name="MATHANG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NH_MH__IDMH__48CFD27E">
+          <End Role="MON_HOC" Type="Self.MON_HOC" Multiplicity="1" />
+          <End Role="NH_MH" Type="Self.NH_MH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MON_HOC">
+              <PropertyRef Name="IDMH" />
+            </Principal>
+            <Dependent Role="NH_MH">
+              <PropertyRef Name="IDMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SV_MH__IDMH__47DBAE45">
+          <End Role="MON_HOC" Type="Self.MON_HOC" Multiplicity="1" />
+          <End Role="SV_MH" Type="Self.SV_MH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MON_HOC">
+              <PropertyRef Name="IDMH" />
+            </Principal>
+            <Dependent Role="SV_MH">
+              <PropertyRef Name="IDMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THOIKHOABI__IDMH__49C3F6B7">
+          <End Role="MON_HOC" Type="Self.MON_HOC" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MON_HOC">
+              <PropertyRef Name="IDMH" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="IDMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TINHLUONG__IDMH__4AB81AF0">
+          <End Role="MON_HOC" Type="Self.MON_HOC" Multiplicity="1" />
+          <End Role="TINHLUONG" Type="Self.TINHLUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MON_HOC">
+              <PropertyRef Name="IDMH" />
+            </Principal>
+            <Dependent Role="TINHLUONG">
+              <PropertyRef Name="IDMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NH_MH__MANGANH__4BAC3F29">
+          <End Role="NGANH_HOC" Type="Self.NGANH_HOC" Multiplicity="1" />
+          <End Role="NH_MH" Type="Self.NH_MH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NGANH_HOC">
+              <PropertyRef Name="MANGANH" />
+            </Principal>
+            <Dependent Role="NH_MH">
+              <PropertyRef Name="MANGANH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THOIKHOAB__MAPHO__5070F446">
+          <End Role="PHONG_HOC" Type="Self.PHONG_HOC" Multiplicity="1" />
+          <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG_HOC">
+              <PropertyRef Name="MAPHONG" />
+            </Principal>
+            <Dependent Role="THOIKHOABIEU">
+              <PropertyRef Name="MAPHONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SV_MH__IDSV__45F365D3">
+          <End Role="SINH_VIEN" Type="Self.SINH_VIEN" Multiplicity="1" />
+          <End Role="SV_MH" Type="Self.SV_MH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SINH_VIEN">
+              <PropertyRef Name="IDSV" />
+            </Principal>
+            <Dependent Role="SV_MH">
+              <PropertyRef Name="IDSV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLHOCVUEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CA_HOC" EntityType="Self.CA_HOC" />
+          <EntitySet Name="CHUC_VU" EntityType="Self.CHUC_VU" />
+          <EntitySet Name="GIANG_VIEN" EntityType="Self.GIANG_VIEN" />
+          <EntitySet Name="GV_MH" EntityType="Self.GV_MH" />
+          <EntitySet Name="HOC_KY" EntityType="Self.HOC_KY" />
+          <EntitySet Name="HOC_VI" EntityType="Self.HOC_VI" />
+          <EntitySet Name="KHOAs" EntityType="Self.KHOA" />
+          <EntitySet Name="KHOA_HOC" EntityType="Self.KHOA_HOC" />
+          <EntitySet Name="LOAI_MH" EntityType="Self.LOAI_MH" />
+          <EntitySet Name="LOPs" EntityType="Self.LOP" />
+          <EntitySet Name="LUONGTHANG_GV" EntityType="Self.LUONGTHANG_GV" />
+          <EntitySet Name="MON_HOC" EntityType="Self.MON_HOC" />
+          <EntitySet Name="NAMs" EntityType="Self.NAM" />
+          <EntitySet Name="NGANH_HOC" EntityType="Self.NGANH_HOC" />
+          <EntitySet Name="NH_MH" EntityType="Self.NH_MH" />
+          <EntitySet Name="PHANHOI_YKIEN" EntityType="Self.PHANHOI_YKIEN" />
+          <EntitySet Name="PHONG_HOC" EntityType="Self.PHONG_HOC" />
+          <EntitySet Name="QUYDOITIENs" EntityType="Self.QUYDOITIEN" />
+          <EntitySet Name="SINH_VIEN" EntityType="Self.SINH_VIEN" />
+          <EntitySet Name="SV_MH" EntityType="Self.SV_MH" />
+          <EntitySet Name="THANGLUONGs" EntityType="Self.THANGLUONG" />
+          <EntitySet Name="THOIKHOABIEUx" EntityType="Self.THOIKHOABIEU" />
+          <EntitySet Name="TINHLUONGs" EntityType="Self.TINHLUONG" />
+          <AssociationSet Name="FK__THOIKHOABI__MACH__5165187F" Association="Self.FK__THOIKHOABI__MACH__5165187F">
+            <End Role="CA_HOC" EntitySet="CA_HOC" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GIANG_VIEN__MACV__534D60F1" Association="Self.FK__GIANG_VIEN__MACV__534D60F1">
+            <End Role="CHUC_VU" EntitySet="CHUC_VU" />
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GIANG_VIE__MAKHO__5535A963" Association="Self.FK__GIANG_VIE__MAKHO__5535A963">
+            <End Role="KHOA" EntitySet="KHOAs" />
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GIANG_VIEN__MAHV__52593CB8" Association="Self.FK__GIANG_VIEN__MAHV__52593CB8">
+            <End Role="HOC_VI" EntitySet="HOC_VI" />
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GV_MH__IDGV__4222D4EF" Association="Self.FK__GV_MH__IDGV__4222D4EF">
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+            <End Role="GV_MH" EntitySet="GV_MH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LUONGTHANG__IDGV__44FF419A" Association="Self.FK__LUONGTHANG__IDGV__44FF419A">
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+            <End Role="LUONGTHANG_GV" EntitySet="LUONGTHANG_GV" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THOIKHOABI__IDGV__4316F928" Association="Self.FK__THOIKHOABI__IDGV__4316F928">
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TINHLUONG__IDGV__440B1D61" Association="Self.FK__TINHLUONG__IDGV__440B1D61">
+            <End Role="GIANG_VIEN" EntitySet="GIANG_VIEN" />
+            <End Role="TINHLUONG" EntitySet="TINHLUONGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__GV_MH__IDMH__46E78A0C" Association="Self.FK__GV_MH__IDMH__46E78A0C">
+            <End Role="MON_HOC" EntitySet="MON_HOC" />
+            <End Role="GV_MH" EntitySet="GV_MH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LOP__MAKHOA__4F7CD00D" Association="Self.FK__LOP__MAKHOA__4F7CD00D">
+            <End Role="KHOA" EntitySet="KHOAs" />
+            <End Role="LOP" EntitySet="LOPs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MON_HOC__MALMH__4CA06362" Association="Self.FK__MON_HOC__MALMH__4CA06362">
+            <End Role="LOAI_MH" EntitySet="LOAI_MH" />
+            <End Role="MON_HOC" EntitySet="MON_HOC" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SINH_VIEN__IDLOP__4D94879B" Association="Self.FK__SINH_VIEN__IDLOP__4D94879B">
+            <End Role="LOP" EntitySet="LOPs" />
+            <End Role="SINH_VIEN" EntitySet="SINH_VIEN" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THOIKHOAB__IDLOP__4E88ABD4" Association="Self.FK__THOIKHOAB__IDLOP__4E88ABD4">
+            <End Role="LOP" EntitySet="LOPs" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LUONGTHAN__MATHA__5441852A" Association="Self.FK__LUONGTHAN__MATHA__5441852A">
+            <End Role="THANGLUONG" EntitySet="THANGLUONGs" />
+            <End Role="LUONGTHANG_GV" EntitySet="LUONGTHANG_GV" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NH_MH__IDMH__48CFD27E" Association="Self.FK__NH_MH__IDMH__48CFD27E">
+            <End Role="MON_HOC" EntitySet="MON_HOC" />
+            <End Role="NH_MH" EntitySet="NH_MH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SV_MH__IDMH__47DBAE45" Association="Self.FK__SV_MH__IDMH__47DBAE45">
+            <End Role="MON_HOC" EntitySet="MON_HOC" />
+            <End Role="SV_MH" EntitySet="SV_MH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THOIKHOABI__IDMH__49C3F6B7" Association="Self.FK__THOIKHOABI__IDMH__49C3F6B7">
+            <End Role="MON_HOC" EntitySet="MON_HOC" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TINHLUONG__IDMH__4AB81AF0" Association="Self.FK__TINHLUONG__IDMH__4AB81AF0">
+            <End Role="MON_HOC" EntitySet="MON_HOC" />
+            <End Role="TINHLUONG" EntitySet="TINHLUONGs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NH_MH__MANGANH__4BAC3F29" Association="Self.FK__NH_MH__MANGANH__4BAC3F29">
+            <End Role="NGANH_HOC" EntitySet="NGANH_HOC" />
+            <End Role="NH_MH" EntitySet="NH_MH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THOIKHOAB__MAPHO__5070F446" Association="Self.FK__THOIKHOAB__MAPHO__5070F446">
+            <End Role="PHONG_HOC" EntitySet="PHONG_HOC" />
+            <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SV_MH__IDSV__45F365D3" Association="Self.FK__SV_MH__IDSV__45F365D3">
+            <End Role="SINH_VIEN" EntitySet="SINH_VIEN" />
+            <End Role="SV_MH" EntitySet="SV_MH" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QLHOCVUModelStoreContainer" CdmEntityContainer="QLHOCVUEntities">
+          <EntitySetMapping Name="CA_HOC">
+            <EntityTypeMapping TypeName="QLHOCVUModel.CA_HOC">
+              <MappingFragment StoreEntitySet="CA_HOC">
+                <ScalarProperty Name="MACH" ColumnName="MACH" />
+                <ScalarProperty Name="TENCA" ColumnName="TENCA" />
+                <ScalarProperty Name="SOTIET" ColumnName="SOTIET" />
+                <ScalarProperty Name="THOIGIAN1TIET" ColumnName="THOIGIAN1TIET" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHUC_VU">
+            <EntityTypeMapping TypeName="QLHOCVUModel.CHUC_VU">
+              <MappingFragment StoreEntitySet="CHUC_VU">
+                <ScalarProperty Name="MACV" ColumnName="MACV" />
+                <ScalarProperty Name="TENCV" ColumnName="TENCV" />
+                <ScalarProperty Name="HESOPHUCAPCV" ColumnName="HESOPHUCAPCV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GIANG_VIEN">
+            <EntityTypeMapping TypeName="QLHOCVUModel.GIANG_VIEN">
+              <MappingFragment StoreEntitySet="GIANG_VIEN">
+                <ScalarProperty Name="IDGV" ColumnName="IDGV" />
+                <ScalarProperty Name="MAGV" ColumnName="MAGV" />
+                <ScalarProperty Name="TENGV" ColumnName="TENGV" />
+                <ScalarProperty Name="MAHV" ColumnName="MAHV" />
+                <ScalarProperty Name="MACV" ColumnName="MACV" />
+                <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+                <ScalarProperty Name="QUEQUAN" ColumnName="QUEQUAN" />
+                <ScalarProperty Name="DIACHITAMCHU" ColumnName="DIACHITAMCHU" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="GIOITINHGV" ColumnName="GIOITINHGV" />
+                <ScalarProperty Name="SDTNGUOITHANGV" ColumnName="SDTNGUOITHANGV" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="TRANGTHAIGV" ColumnName="TRANGTHAIGV" />
+                <ScalarProperty Name="MAKHOA" ColumnName="MAKHOA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GV_MH">
+            <EntityTypeMapping TypeName="QLHOCVUModel.GV_MH">
+              <MappingFragment StoreEntitySet="GV_MH">
+                <ScalarProperty Name="IDGV" ColumnName="IDGV" />
+                <ScalarProperty Name="IDMH" ColumnName="IDMH" />
+                <ScalarProperty Name="NGAYBD" ColumnName="NGAYBD" />
+                <ScalarProperty Name="NGANHDAY" ColumnName="NGANHDAY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOC_KY">
+            <EntityTypeMapping TypeName="QLHOCVUModel.HOC_KY">
+              <MappingFragment StoreEntitySet="HOC_KY">
+                <ScalarProperty Name="MAHK" ColumnName="MAHK" />
+                <ScalarProperty Name="TENHK" ColumnName="TENHK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOC_VI">
+            <EntityTypeMapping TypeName="QLHOCVUModel.HOC_VI">
+              <MappingFragment StoreEntitySet="HOC_VI">
+                <ScalarProperty Name="MAHV" ColumnName="MAHV" />
+                <ScalarProperty Name="TENHV" ColumnName="TENHV" />
+                <ScalarProperty Name="HESOPHUCAPHOCVI" ColumnName="HESOPHUCAPHOCVI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KHOAs">
+            <EntityTypeMapping TypeName="QLHOCVUModel.KHOA">
+              <MappingFragment StoreEntitySet="KHOA">
+                <ScalarProperty Name="MAKHOA" ColumnName="MAKHOA" />
+                <ScalarProperty Name="TENKHOA" ColumnName="TENKHOA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KHOA_HOC">
+            <EntityTypeMapping TypeName="QLHOCVUModel.KHOA_HOC">
+              <MappingFragment StoreEntitySet="KHOA_HOC">
+                <ScalarProperty Name="MAKHOAHOC" ColumnName="MAKHOAHOC" />
+                <ScalarProperty Name="TENKHOA" ColumnName="TENKHOA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOAI_MH">
+            <EntityTypeMapping TypeName="QLHOCVUModel.LOAI_MH">
+              <MappingFragment StoreEntitySet="LOAI_MH">
+                <ScalarProperty Name="MALMH" ColumnName="MALMH" />
+                <ScalarProperty Name="TENLMH" ColumnName="TENLMH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOPs">
+            <EntityTypeMapping TypeName="QLHOCVUModel.LOP">
+              <MappingFragment StoreEntitySet="LOP">
+                <ScalarProperty Name="IDLOP" ColumnName="IDLOP" />
+                <ScalarProperty Name="MALOP" ColumnName="MALOP" />
+                <ScalarProperty Name="TENLOP" ColumnName="TENLOP" />
+                <ScalarProperty Name="MAKHOA" ColumnName="MAKHOA" />
+                <ScalarProperty Name="CHUYENNGANH" ColumnName="CHUYENNGANH" />
+                <ScalarProperty Name="TRAITHAILOP" ColumnName="TRAITHAILOP" />
+                <ScalarProperty Name="KHOAHOC" ColumnName="KHOAHOC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LUONGTHANG_GV">
+            <EntityTypeMapping TypeName="QLHOCVUModel.LUONGTHANG_GV">
+              <MappingFragment StoreEntitySet="LUONGTHANG_GV">
+                <ScalarProperty Name="IDGV" ColumnName="IDGV" />
+                <ScalarProperty Name="MATHANG" ColumnName="MATHANG" />
+                <ScalarProperty Name="NAMGVTHUCHIEN" ColumnName="NAMGVTHUCHIEN" />
+                <ScalarProperty Name="LUONGTONG" ColumnName="LUONGTONG" />
+                <ScalarProperty Name="TRANGTHAI" ColumnName="TRANGTHAI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MON_HOC">
+            <EntityTypeMapping TypeName="QLHOCVUModel.MON_HOC">
+              <MappingFragment StoreEntitySet="MON_HOC">
+                <ScalarProperty Name="IDMH" ColumnName="IDMH" />
+                <ScalarProperty Name="MAMH" ColumnName="MAMH" />
+                <ScalarProperty Name="TENMH" ColumnName="TENMH" />
+                <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+                <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+                <ScalarProperty Name="YEUCAUMH" ColumnName="YEUCAUMH" />
+                <ScalarProperty Name="MALMH" ColumnName="MALMH" />
+                <ScalarProperty Name="TRANGTHAIMH" ColumnName="TRANGTHAIMH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NAMs">
+            <EntityTypeMapping TypeName="QLHOCVUModel.NAM">
+              <MappingFragment StoreEntitySet="NAM">
+                <ScalarProperty Name="MANAM" ColumnName="MANAM" />
+                <ScalarProperty Name="TENNAM" ColumnName="TENNAM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NGANH_HOC">
+            <EntityTypeMapping TypeName="QLHOCVUModel.NGANH_HOC">
+              <MappingFragment StoreEntitySet="NGANH_HOC">
+                <ScalarProperty Name="MANGANH" ColumnName="MANGANH" />
+                <ScalarProperty Name="TENNGANH" ColumnName="TENNGANH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NH_MH">
+            <EntityTypeMapping TypeName="QLHOCVUModel.NH_MH">
+              <MappingFragment StoreEntitySet="NH_MH">
+                <ScalarProperty Name="IDMH" ColumnName="IDMH" />
+                <ScalarProperty Name="MANGANH" ColumnName="MANGANH" />
+                <ScalarProperty Name="THELOAIMH" ColumnName="THELOAIMH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PHANHOI_YKIEN">
+            <EntityTypeMapping TypeName="QLHOCVUModel.PHANHOI_YKIEN">
+              <MappingFragment StoreEntitySet="PHANHOI_YKIEN">
+                <ScalarProperty Name="IDPH" ColumnName="IDPH" />
+                <ScalarProperty Name="MAPH" ColumnName="MAPH" />
+                <ScalarProperty Name="TENPH" ColumnName="TENPH" />
+                <ScalarProperty Name="NOIDUNGPH" ColumnName="NOIDUNGPH" />
+                <ScalarProperty Name="NGUOIPH" ColumnName="NGUOIPH" />
+                <ScalarProperty Name="NGUOITLPH" ColumnName="NGUOITLPH" />
+                <ScalarProperty Name="NGAYGIONEUPH" ColumnName="NGAYGIONEUPH" />
+                <ScalarProperty Name="NGAYGIOTLPH" ColumnName="NGAYGIOTLPH" />
+                <ScalarProperty Name="TRANGTHAIPH" ColumnName="TRANGTHAIPH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PHONG_HOC">
+            <EntityTypeMapping TypeName="QLHOCVUModel.PHONG_HOC">
+              <MappingFragment StoreEntitySet="PHONG_HOC">
+                <ScalarProperty Name="MAPHONG" ColumnName="MAPHONG" />
+                <ScalarProperty Name="TENPHONG" ColumnName="TENPHONG" />
+                <ScalarProperty Name="TRANGTHAIPH" ColumnName="TRANGTHAIPH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QUYDOITIENs">
+            <EntityTypeMapping TypeName="QLHOCVUModel.QUYDOITIEN">
+              <MappingFragment StoreEntitySet="QUYDOITIEN">
+                <ScalarProperty Name="MAQD" ColumnName="MAQD" />
+                <ScalarProperty Name="TENQD" ColumnName="TENQD" />
+                <ScalarProperty Name="SOTIETQD" ColumnName="SOTIETQD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINH_VIEN">
+            <EntityTypeMapping TypeName="QLHOCVUModel.SINH_VIEN">
+              <MappingFragment StoreEntitySet="SINH_VIEN">
+                <ScalarProperty Name="IDSV" ColumnName="IDSV" />
+                <ScalarProperty Name="MASV" ColumnName="MASV" />
+                <ScalarProperty Name="TENSV" ColumnName="TENSV" />
+                <ScalarProperty Name="CMND" ColumnName="CMND" />
+                <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+                <ScalarProperty Name="QUEQUANSV" ColumnName="QUEQUANSV" />
+                <ScalarProperty Name="DIEMSV" ColumnName="DIEMSV" />
+                <ScalarProperty Name="SVKHOAHOC" ColumnName="SVKHOAHOC" />
+                <ScalarProperty Name="DIACHITHUONGCHU" ColumnName="DIACHITHUONGCHU" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+                <ScalarProperty Name="SDTNGUOITHANSV" ColumnName="SDTNGUOITHANSV" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="IDLOP" ColumnName="IDLOP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SV_MH">
+            <EntityTypeMapping TypeName="QLHOCVUModel.SV_MH">
+              <MappingFragment StoreEntitySet="SV_MH">
+                <ScalarProperty Name="IDSV" ColumnName="IDSV" />
+                <ScalarProperty Name="IDMH" ColumnName="IDMH" />
+                <ScalarProperty Name="DIEMMH" ColumnName="DIEMMH" />
+                <ScalarProperty Name="HKTHUCHIEN" ColumnName="HKTHUCHIEN" />
+                <ScalarProperty Name="NAMTHUCHIEN" ColumnName="NAMTHUCHIEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THANGLUONGs">
+            <EntityTypeMapping TypeName="QLHOCVUModel.THANGLUONG">
+              <MappingFragment StoreEntitySet="THANGLUONG">
+                <ScalarProperty Name="MATHANG" ColumnName="MATHANG" />
+                <ScalarProperty Name="TENTHANG" ColumnName="TENTHANG" />
+                <ScalarProperty Name="SOTIETTOIDA" ColumnName="SOTIETTOIDA" />
+                <ScalarProperty Name="SOTIETTOITHIEU" ColumnName="SOTIETTOITHIEU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THOIKHOABIEUx">
+            <EntityTypeMapping TypeName="QLHOCVUModel.THOIKHOABIEU">
+              <MappingFragment StoreEntitySet="THOIKHOABIEU">
+                <ScalarProperty Name="MACH" ColumnName="MACH" />
+                <ScalarProperty Name="IDGV" ColumnName="IDGV" />
+                <ScalarProperty Name="IDMH" ColumnName="IDMH" />
+                <ScalarProperty Name="IDLOP" ColumnName="IDLOP" />
+                <ScalarProperty Name="MAPHONG" ColumnName="MAPHONG" />
+                <ScalarProperty Name="NGAYHOC" ColumnName="NGAYHOC" />
+                <ScalarProperty Name="GIOBD" ColumnName="GIOBD" />
+                <ScalarProperty Name="GIOKT" ColumnName="GIOKT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TINHLUONGs">
+            <EntityTypeMapping TypeName="QLHOCVUModel.TINHLUONG">
+              <MappingFragment StoreEntitySet="TINHLUONG">
+                <ScalarProperty Name="IDGV" ColumnName="IDGV" />
+                <ScalarProperty Name="IDMH" ColumnName="IDMH" />
+                <ScalarProperty Name="SOTIET" ColumnName="SOTIET" />
+                <ScalarProperty Name="SOTIENQUYDOI" ColumnName="SOTIENQUYDOI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
