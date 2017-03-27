@@ -106,6 +106,19 @@
     <Compile Include="userControl\monHoc\ucCreatemh.Designer.cs">
       <DependentUpon>ucCreatemh.cs</DependentUpon>
     </Compile>
+    <Compile Include="userControl\search\Class1.cs" />
+    <Compile Include="userControl\search\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userControl\search\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\search\monHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userControl\search\monHoc.Designer.cs">
+      <DependentUpon>monHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControl\search\ucSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\monHoc\ucCreatemh.resx">
       <DependentUpon>ucCreatemh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\search\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\search\monHoc.resx">
+      <DependentUpon>monHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\search\ucSearch.resx">
       <DependentUpon>ucSearch.cs</DependentUpon>
