@@ -25,7 +25,7 @@ namespace DemoMetroUI
                 return _instance;
             }
         }
-        //ê
+        //ê sao rồi
         public MetroFramework.Controls.MetroPanel MetroContainer
         {
             get
