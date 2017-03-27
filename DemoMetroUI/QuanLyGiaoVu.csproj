@@ -197,6 +197,7 @@
     <None Include="Resources\Search-icon %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="userControl\a\" />
     <Folder Include="userControl\caHoc\" />
     <Folder Include="userControl\chucVu\" />
     <Folder Include="userControl\khoa\" />
