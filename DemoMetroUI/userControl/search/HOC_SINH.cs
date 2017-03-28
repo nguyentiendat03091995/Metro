@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DemoMetroUI.userControl.search
 {
-    public partial class monHoc : Form
+    public partial class HOC_SINH : Form
     {
-        public monHoc()
+        public HOC_SINH()
         {
             InitializeComponent();
         }

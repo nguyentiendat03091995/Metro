@@ -18,44 +18,47 @@ namespace DemoMetroUI.userControl.search
     {
         private string macv { get; set; }
         private string mak { get; set; }
+        private string mahv { get; set; }
         public DanhSachGV()
         {
             InitializeComponent();
         }
         private void lbdsCV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            var cv = (lbdsCV.SelectedValue);
-        
-             macv =cv.ToString() ;
-            var k = (lbdsK.SelectedValue);
-
-            k = k.ToString();
-            load(macv,mak);
+            //lbdsCV.SelectedIndex =3;
+            var cv = (lbdsCV.SelectedValue);        
+            macv =cv.ToString() ;         
+            load(macv,mak,mahv);
             
         }
         private void lbdsK_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var cv = (lbdsCV.SelectedValue);
-
-            macv = cv.ToString();
+            //lbdsK.SelectedIndex = 1;
             var k = (lbdsK.SelectedValue );
            
                 mak = k.ToString();
-                load(macv, mak);
+                load(macv, mak,mahv);
             
             
+        }
+        private void lbdsHV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //lbdsHV.SelectedIndex = 2;
+            var hv = (lbdsHV.SelectedValue);
+
+            mahv = hv.ToString();
+            load(macv, mak,mahv);
         }
 
         private void Form1_Load(object sender, EventArgs e )
         {
             {
                
-                load(null,null);
+                load(macv, mak, mahv);
             }
         }
     
-        public void load(string MACV,string MAKHOA)
+        public void load(string MACV,string MAKHOA,string MAHV)
         {
             using (var db = new QLHOCVUEntities())
             {
@@ -67,14 +70,15 @@ namespace DemoMetroUI.userControl.search
                         MACV = "",
                         TENCV = "Tất cả"
                     };
-                    var chuc_vu = db.CHUC_VU.ToList();
+               
+                var chuc_vu = db.CHUC_VU.ToList();
                     chuc_vu.Insert(0, cvdf);
                     lbdsCV.DataSource = chuc_vu;
-                   
-                    lbdsCV.SelectedItem =cvdf ;
-                    lbdsCV.DisplayMember = "TENCV";
-                    lbdsCV.ValueMember = "MACV";
                 }
+                lbdsCV.DisplayMember = "TENCV";
+                    lbdsCV.ValueMember = "MACV";
+                   
+               
                 if (lbdsK.DataSource == null)
                 {
                     var kdf = new KHOA()
@@ -82,21 +86,33 @@ namespace DemoMetroUI.userControl.search
                         MAKHOA = "",
                         TENKHOA = "Tất cả"
                     };
-                    var khoas = db.KHOAs.ToList();
+               
+                var khoas = db.KHOAs.ToList();
                     khoas.Insert(0, kdf);
                     lbdsK.DataSource = khoas;
-                    lbdsK.DisplayMember = "TENKHOA";
+                }
+                lbdsK.DisplayMember = "TENKHOA";
                     lbdsK.ValueMember = "MAKHOA";
 
-                
-                }
+
                 if (lbdsHV.DataSource == null)
                 {
-                    lbdsHV.DataSource = db.HOC_VI.ToList();
-                    lbdsHV.DisplayMember = "TENHV";
-                    lbdsHV.ValueMember = "MAHV";
+
+                    var hvdf = new HOC_VI()
+                    {
+                        MAHV = "",
+                        TENHV = "Tất cả"
+                    };
+               
+                    var hoc_vi = db.HOC_VI.ToList();
+                    hoc_vi.Insert(0, hvdf);
+                    lbdsHV.DataSource = hoc_vi;
                 }
-                //Load DataGridView
+                lbdsHV.DisplayMember = "TENHV";
+                    lbdsHV.ValueMember = "MAHV";
+
+                
+
                 dgvGV.AutoSize = true;
                 dgvGV.AutoGenerateColumns = false;
                 var GV = db.GIANG_VIEN.AsQueryable();
@@ -108,6 +124,11 @@ namespace DemoMetroUI.userControl.search
                 {
                     GV = GV.Where(x => x.MAKHOA == MAKHOA);
                 }
+                if (!string.IsNullOrEmpty(MAHV))
+                {
+                    GV = GV.Where(x => x.MAHV == MAHV);
+                }
+
                 dgvGV.DataSource =GV.Select(x=>new
                 {
                     MAGV =x.MAGV,
@@ -140,8 +161,55 @@ namespace DemoMetroUI.userControl.search
         {
 
         }
+        
 
-      
+
+        
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            DialogResult = MessageBox.Show("Bạn có chắc muốn xóa!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (DialogResult == DialogResult.OK)
+            {
+                ketnoi.openketnoi();
+                ketnoi.executeQuery("delete from GIANG_VIEN where MAGV='" + dgvGV.Rows[dgvGV.CurrentCell.RowIndex].Cells[1].Value.ToString() + "' ");
+                load(null, null, null);
+                ketnoi.dongketnoi();
+            }
+
+
+        }
+
+        private void tbTim_TextChanged(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            
+         
+        }
+
+        private void btnTT_Click(object sender, EventArgs e)
+        {
+            ketnoi.openketnoi();
+            if(dgvGV.Rows[dgvGV.CurrentCell.RowIndex].Cells[0].Value.ToString()=="Rảnh")
+            { 
+            ketnoi.executeQuery("update GIANG_VIEN set TRANGTHAIGV=2 where MAGV='" + dgvGV.Rows[dgvGV.CurrentCell.RowIndex].Cells[1].Value.ToString() + "'");
+            }
+            if (dgvGV.Rows[dgvGV.CurrentCell.RowIndex].Cells[0].Value.ToString() == "Không Rảnh")
+            {
+                ketnoi.executeQuery("update GIANG_VIEN set TRANGTHAIGV=1 where MAGV='" + dgvGV.Rows[dgvGV.CurrentCell.RowIndex].Cells[1].Value.ToString() + "'");
+            }
+            load(macv, mak, mahv);
+            ketnoi.dongketnoi();
+
+
+        }
+
+
+
 
 
         // Khi click vào 1 dòng bất kỳ trong DataGridView hiện lên TextBox
