@@ -25,7 +25,7 @@ namespace DemoMetroUI
                 return _instance;
             }
         }
-        //ê sao rồi
+        //Tao là Hiền, đẹp trai thanh lịch vô địch khắp vũ trụ
         public MetroFramework.Controls.MetroPanel MetroContainer
         {
             get
