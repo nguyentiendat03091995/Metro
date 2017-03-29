@@ -32,11 +32,11 @@
             this.mtThemmh = new MetroFramework.Controls.MetroTile();
             this.mtThemlop = new MetroFramework.Controls.MetroTile();
             this.mtThemphong = new MetroFramework.Controls.MetroTile();
-            this.mlBack = new MetroFramework.Controls.MetroLink();
             this.mtThemkhoa = new MetroFramework.Controls.MetroTile();
             this.mtThemca = new MetroFramework.Controls.MetroTile();
             this.mtThemnganh = new MetroFramework.Controls.MetroTile();
             this.mtThemcv = new MetroFramework.Controls.MetroTile();
+            this.mlBack = new MetroFramework.Controls.MetroLink();
             this.SuspendLayout();
             // 
             // mtThemgv
@@ -87,17 +87,6 @@
             this.mtThemphong.UseSelectable = true;
             this.mtThemphong.Click += new System.EventHandler(this.mtThemphong_Click);
             // 
-            // mlBack
-            // 
-            this.mlBack.Image = global::DemoMetroUI.Properties.Resources._1489502099_Previous_2;
-            this.mlBack.ImageSize = 32;
-            this.mlBack.Location = new System.Drawing.Point(0, 0);
-            this.mlBack.Name = "mlBack";
-            this.mlBack.Size = new System.Drawing.Size(75, 39);
-            this.mlBack.TabIndex = 2;
-            this.mlBack.UseSelectable = true;
-            this.mlBack.Click += new System.EventHandler(this.mlBack_Click);
-            // 
             // mtThemkhoa
             // 
             this.mtThemkhoa.ActiveControl = null;
@@ -107,6 +96,7 @@
             this.mtThemkhoa.TabIndex = 3;
             this.mtThemkhoa.Text = "Thêm Khoa";
             this.mtThemkhoa.UseSelectable = true;
+            this.mtThemkhoa.Click += new System.EventHandler(this.mtThemkhoa_Click);
             // 
             // mtThemca
             // 
@@ -117,6 +107,7 @@
             this.mtThemca.TabIndex = 3;
             this.mtThemca.Text = "Thêm Ca Học";
             this.mtThemca.UseSelectable = true;
+            this.mtThemca.Click += new System.EventHandler(this.mtThemca_Click);
             // 
             // mtThemnganh
             // 
@@ -127,6 +118,7 @@
             this.mtThemnganh.TabIndex = 3;
             this.mtThemnganh.Text = "Thêm Ngành";
             this.mtThemnganh.UseSelectable = true;
+            this.mtThemnganh.Click += new System.EventHandler(this.mtThemnganh_Click);
             // 
             // mtThemcv
             // 
@@ -137,6 +129,18 @@
             this.mtThemcv.TabIndex = 3;
             this.mtThemcv.Text = "Thêm Chức Vụ";
             this.mtThemcv.UseSelectable = true;
+            this.mtThemcv.Click += new System.EventHandler(this.mtThemcv_Click);
+            // 
+            // mlBack
+            // 
+            this.mlBack.Image = global::DemoMetroUI.Properties.Resources._1489502099_Previous_2;
+            this.mlBack.ImageSize = 32;
+            this.mlBack.Location = new System.Drawing.Point(0, 0);
+            this.mlBack.Name = "mlBack";
+            this.mlBack.Size = new System.Drawing.Size(75, 39);
+            this.mlBack.TabIndex = 2;
+            this.mlBack.UseSelectable = true;
+            this.mlBack.Click += new System.EventHandler(this.mlBack_Click);
             // 
             // ucThem
             // 

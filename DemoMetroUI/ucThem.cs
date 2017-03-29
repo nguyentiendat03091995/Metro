@@ -12,6 +12,12 @@ using MetroFramework.Forms;
 using DemoMetroUI;
 using DemoMetroUI.userControl.giangVien;
 using DemoMetroUI.userControl.monHoc;
+using DemoMetroUI.userControl.lop;
+using DemoMetroUI.userControl.khoa;
+using DemoMetroUI.userControl.caHoc;
+using DemoMetroUI.userControl.phong;
+using DemoMetroUI.userControl.chucVu;
+using DemoMetroUI.userControl.nganh;
 
 
 namespace DemoMetroUI
@@ -37,12 +43,18 @@ namespace DemoMetroUI
         //cmit
         private void mtThemlop_Click(object sender, EventArgs e)
         {
-            MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            //MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            ucLop uc = new ucLop();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucLop"].BringToFront();
         }
 
         private void mtThemphong_Click(object sender, EventArgs e)
         {
-            MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            //MetroFramework.MetroMessageBox.Show(this, "Mục đang được nâng cấp !, vui lòng chọn mục khác !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            ucPhong uc = new ucPhong();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucPhong"].BringToFront();
         }
 
         private void mtThemmh_Click(object sender, EventArgs e)
@@ -57,6 +69,34 @@ namespace DemoMetroUI
             ucDashboard uc = new ucDashboard();
             frMain.Instance.MetroContainer.Controls.Add(uc);
             frMain.Instance.MetroContainer.Controls["ucDashboard"].BringToFront();
+        }
+
+        private void mtThemkhoa_Click(object sender, EventArgs e)
+        {
+            ucKhoa uc = new ucKhoa();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucKhoa"].BringToFront();
+        }
+
+        private void mtThemca_Click(object sender, EventArgs e)
+        {
+            ucCa uc = new ucCa();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucCa"].BringToFront();
+        }
+
+        private void mtThemcv_Click(object sender, EventArgs e)
+        {
+            ucChucvu uc = new ucChucvu();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucChucvu"].BringToFront();
+        }
+
+        private void mtThemnganh_Click(object sender, EventArgs e)
+        {
+            ucNganh uc = new ucNganh();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucNganh"].BringToFront();
         }
     }
 }

@@ -82,11 +82,29 @@
     <Compile Include="ucThem.Designer.cs">
       <DependentUpon>ucThem.cs</DependentUpon>
     </Compile>
+    <Compile Include="userControl\caHoc\ucCa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\caHoc\ucCa.Designer.cs">
+      <DependentUpon>ucCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\chucVu\ucChucvu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\chucVu\ucChucvu.Designer.cs">
+      <DependentUpon>ucChucvu.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControl\giangVien\ucCreategv.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="userControl\giangVien\ucCreategv.Designer.cs">
       <DependentUpon>ucCreategv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\khoa\ucKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\khoa\ucKhoa.Designer.cs">
+      <DependentUpon>ucKhoa.cs</DependentUpon>
     </Compile>
     <Compile Include="userControl\lich\ucLichcanhan.cs">
       <SubType>UserControl</SubType>
@@ -100,11 +118,29 @@
     <Compile Include="userControl\lich\ucLichtong.Designer.cs">
       <DependentUpon>ucLichtong.cs</DependentUpon>
     </Compile>
+    <Compile Include="userControl\lop\ucLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\lop\ucLop.Designer.cs">
+      <DependentUpon>ucLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControl\monHoc\ucCreatemh.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="userControl\monHoc\ucCreatemh.Designer.cs">
       <DependentUpon>ucCreatemh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\nganh\ucNganh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\nganh\ucNganh.Designer.cs">
+      <DependentUpon>ucNganh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\phong\ucPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\phong\ucPhong.Designer.cs">
+      <DependentUpon>ucPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="userControl\search\ucSearch.cs">
       <SubType>UserControl</SubType>
@@ -149,8 +185,17 @@
     <EmbeddedResource Include="ucThem.resx">
       <DependentUpon>ucThem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="userControl\caHoc\ucCa.resx">
+      <DependentUpon>ucCa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\chucVu\ucChucvu.resx">
+      <DependentUpon>ucChucvu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userControl\giangVien\ucCreategv.resx">
       <DependentUpon>ucCreategv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\khoa\ucKhoa.resx">
+      <DependentUpon>ucKhoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\lich\ucLichcanhan.resx">
       <DependentUpon>ucLichcanhan.cs</DependentUpon>
@@ -158,8 +203,17 @@
     <EmbeddedResource Include="userControl\lich\ucLichtong.resx">
       <DependentUpon>ucLichtong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="userControl\lop\ucLop.resx">
+      <DependentUpon>ucLop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userControl\monHoc\ucCreatemh.resx">
       <DependentUpon>ucCreatemh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\nganh\ucNganh.resx">
+      <DependentUpon>ucNganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\phong\ucPhong.resx">
+      <DependentUpon>ucPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\search\ucSearch.resx">
       <DependentUpon>ucSearch.cs</DependentUpon>
@@ -196,12 +250,7 @@
   <ItemGroup>
     <None Include="Resources\Search-icon %281%29.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="userControl\caHoc\" />
-    <Folder Include="userControl\chucVu\" />
-    <Folder Include="userControl\khoa\" />
-    <Folder Include="userControl\nganh\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
