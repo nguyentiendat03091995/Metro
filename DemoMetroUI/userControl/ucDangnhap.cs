@@ -31,6 +31,7 @@ namespace DemoMetroUI.userControl
             }
             else
             {
+                //hế lu
                 MetroFramework.MetroMessageBox.Show(this, "User Name or Password was wron't !", "Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
