@@ -16,8 +16,8 @@ namespace DemoMetroUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new userControl.search.DanhSachGV());
-            //Application.Run(new );
+            //Application.Run(new userControl.search.DanhSachGV());
+            Application.Run(new frMain());
         }
     }
 }

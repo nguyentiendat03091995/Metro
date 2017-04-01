@@ -45,5 +45,19 @@ namespace DemoMetroUI.userControl.search
                 //}
             }
         }
+
+        private void mtGv_Click(object sender, EventArgs e)
+        {
+            ucDSGV uc = new ucDSGV();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucDSGV"].BringToFront();
+        }
+
+        private void mtHs_Click(object sender, EventArgs e)
+        {
+            ucDSHS uc = new ucDSHS();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucDSHS"].BringToFront();
+        }
     }
 }
