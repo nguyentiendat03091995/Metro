@@ -239,6 +239,7 @@
             this.Controls.Add(this.dgvGV);
             this.Name = "HOC_SINH";
             this.Text = "Học Sinh";
+            this.Load += new System.EventHandler(this.HOC_SINH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

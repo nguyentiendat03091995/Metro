@@ -318,6 +318,9 @@
     <EmbeddedResource Include="userControl\monHoc\ucCreatemh.resx">
       <DependentUpon>ucCreatemh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="userControl\search\HOC_SINH.resx">
+      <DependentUpon>HOC_SINH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userControl\search\ucSearch.resx">
       <DependentUpon>ucSearch.cs</DependentUpon>
     </EmbeddedResource>

@@ -16,5 +16,10 @@ namespace DemoMetroUI.userControl.search
         {
             InitializeComponent();
         }
+
+        private void HOC_SINH_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
