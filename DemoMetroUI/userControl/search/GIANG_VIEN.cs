@@ -129,23 +129,23 @@ namespace DemoMetroUI.userControl.search
                     GV = GV.Where(x => x.MAHV == MAHV);
                 }
 
-                dgvGV.DataSource =GV.Select(x=>new
+                dgvGV.DataSource = GV.Select(x => new
                 {
-                    MAGV =x.MAGV,
-                    MACV =x.MACV,
-                    TENCV =x.CHUC_VU.TENCV,
-                    TENGV =x.TENGV,
-                    MAHV =x.MAHV,
-                    TENHV =x.HOC_VI.TENHV,
-                    Email =x.EMAIL,
-                    QueQuan =x.QUEQUAN,
-                    DiaChiTamChu =x.DIACHITAMCHU,
-                    MAKHOA =x.MAKHOA,
-                    TenKhoa =x.KHOA.TENKHOA,
-                    TrangThaiGV =x.TRANGTHAIGV=="1"?"Rảnh":"Không Rảnh",
-                    
-                } ).ToList();
-                
+                    MAGV = x.MAGV,
+                    MACV = x.MACV,
+                    TENCV = x.CHUC_VU.TENCV,
+                    TENGV = x.TENGV,
+                    MAHV = x.MAHV,
+                    TENHV = x.HOC_VI.TENHV,
+                    Email = x.EMAIL,
+                    QueQuan = x.QUEQUAN,
+                    DiaChiTamChu = x.DIACHITAMCHU,
+                    MAKHOA = x.MAKHOA,
+                    TenKhoa = x.KHOA.TENKHOA,
+                    TrangThaiGV = x.TRANGTHAIGV == "1" ? "Rảnh" : "Không Rảnh",
+
+                }).ToList();
+
                 btnThem.Enabled = false;
                 btnSua.Enabled = false;
             }

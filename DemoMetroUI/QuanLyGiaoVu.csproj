@@ -251,6 +251,12 @@
     <Compile Include="userControl\phong\ucPhong.Designer.cs">
       <DependentUpon>ucPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="userControl\search\ucDSGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\search\ucDSGV.Designer.cs">
+      <DependentUpon>ucDSGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControl\search\ucSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -320,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\search\HOC_SINH.resx">
       <DependentUpon>HOC_SINH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\search\ucDSGV.resx">
+      <DependentUpon>ucDSGV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\search\ucSearch.resx">
       <DependentUpon>ucSearch.cs</DependentUpon>
