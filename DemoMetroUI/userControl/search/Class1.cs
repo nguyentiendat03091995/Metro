@@ -11,8 +11,10 @@ namespace DemoMetroUI.userControl.search
 {
     public static class ketnoi
     {
+        //workstation id = QLGIAOVU.mssql.somee.com; packet size = 4096; user id = nhoxliaryeuem1_SQLLogin_1; pwd=8l5ab41xg8;data source = QLGIAOVU.mssql.somee.com; persist security info=False;initial catalog = QLGIAOVU
+        //public static string chuoiketnoi = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLHOCVU;User ID=sa;password=123456";
 
-        public static string chuoiketnoi = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLHOCVU;User ID=sa;password=123456";
+        public static string chuoiketnoi = @"workstation id = QLGIAOVU.mssql.somee.com; packet size = 4096; user id = nhoxliaryeuem1_SQLLogin_1; pwd=8l5ab41xg8;data source = QLGIAOVU.mssql.somee.com; persist security info=False;initial catalog = QLGIAOVU";
         public static SqlConnection con;
         public static SqlCommand cmd;
         public static SqlDataAdapter da;
