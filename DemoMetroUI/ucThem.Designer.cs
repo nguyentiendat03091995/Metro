@@ -37,6 +37,7 @@
             this.mtThemnganh = new MetroFramework.Controls.MetroTile();
             this.mtThemcv = new MetroFramework.Controls.MetroTile();
             this.mlBack = new MetroFramework.Controls.MetroLink();
+            this.mtThemlich = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // mtThemgv
@@ -90,7 +91,7 @@
             // mtThemkhoa
             // 
             this.mtThemkhoa.ActiveControl = null;
-            this.mtThemkhoa.Location = new System.Drawing.Point(207, 136);
+            this.mtThemkhoa.Location = new System.Drawing.Point(143, 136);
             this.mtThemkhoa.Name = "mtThemkhoa";
             this.mtThemkhoa.Size = new System.Drawing.Size(114, 50);
             this.mtThemkhoa.TabIndex = 3;
@@ -101,7 +102,7 @@
             // mtThemca
             // 
             this.mtThemca.ActiveControl = null;
-            this.mtThemca.Location = new System.Drawing.Point(379, 136);
+            this.mtThemca.Location = new System.Drawing.Point(449, 136);
             this.mtThemca.Name = "mtThemca";
             this.mtThemca.Size = new System.Drawing.Size(114, 50);
             this.mtThemca.TabIndex = 3;
@@ -112,7 +113,7 @@
             // mtThemnganh
             // 
             this.mtThemnganh.ActiveControl = null;
-            this.mtThemnganh.Location = new System.Drawing.Point(379, 223);
+            this.mtThemnganh.Location = new System.Drawing.Point(449, 223);
             this.mtThemnganh.Name = "mtThemnganh";
             this.mtThemnganh.Size = new System.Drawing.Size(114, 50);
             this.mtThemnganh.TabIndex = 3;
@@ -123,7 +124,7 @@
             // mtThemcv
             // 
             this.mtThemcv.ActiveControl = null;
-            this.mtThemcv.Location = new System.Drawing.Point(207, 223);
+            this.mtThemcv.Location = new System.Drawing.Point(143, 223);
             this.mtThemcv.Name = "mtThemcv";
             this.mtThemcv.Size = new System.Drawing.Size(114, 50);
             this.mtThemcv.TabIndex = 3;
@@ -142,6 +143,17 @@
             this.mlBack.UseSelectable = true;
             this.mlBack.Click += new System.EventHandler(this.mlBack_Click);
             // 
+            // mtThemlich
+            // 
+            this.mtThemlich.ActiveControl = null;
+            this.mtThemlich.Location = new System.Drawing.Point(299, 179);
+            this.mtThemlich.Name = "mtThemlich";
+            this.mtThemlich.Size = new System.Drawing.Size(114, 50);
+            this.mtThemlich.TabIndex = 3;
+            this.mtThemlich.Text = "Thêm Lịch";
+            this.mtThemlich.UseSelectable = true;
+            this.mtThemlich.Click += new System.EventHandler(this.mtThemlich_Click);
+            // 
             // ucThem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,6 +161,7 @@
             this.Controls.Add(this.mtThemcv);
             this.Controls.Add(this.mtThemnganh);
             this.Controls.Add(this.mtThemca);
+            this.Controls.Add(this.mtThemlich);
             this.Controls.Add(this.mtThemkhoa);
             this.Controls.Add(this.mlBack);
             this.Controls.Add(this.mtThemphong);
@@ -173,5 +186,6 @@
         private MetroFramework.Controls.MetroTile mtThemca;
         private MetroFramework.Controls.MetroTile mtThemnganh;
         private MetroFramework.Controls.MetroTile mtThemcv;
+        private MetroFramework.Controls.MetroTile mtThemlich;
     }
 }

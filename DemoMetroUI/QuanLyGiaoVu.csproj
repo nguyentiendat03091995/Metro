@@ -202,6 +202,12 @@
     <Compile Include="userControl\khoa\ucKhoa.Designer.cs">
       <DependentUpon>ucKhoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="userControl\lich\add\ucThemlich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="userControl\lich\add\ucThemlich.Designer.cs">
+      <DependentUpon>ucThemlich.cs</DependentUpon>
+    </Compile>
     <Compile Include="userControl\lich\ucLichcanhan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -317,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\khoa\ucKhoa.resx">
       <DependentUpon>ucKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\lich\add\ucThemlich.resx">
+      <DependentUpon>ucThemlich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userControl\lich\ucLichcanhan.resx">
       <DependentUpon>ucLichcanhan.cs</DependentUpon>

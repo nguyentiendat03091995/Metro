@@ -18,6 +18,7 @@ using DemoMetroUI.userControl.caHoc;
 using DemoMetroUI.userControl.phong;
 using DemoMetroUI.userControl.chucVu;
 using DemoMetroUI.userControl.nganh;
+using DemoMetroUI.userControl.lich.add;
 
 
 namespace DemoMetroUI
@@ -97,6 +98,13 @@ namespace DemoMetroUI
             ucNganh uc = new ucNganh();
             frMain.Instance.MetroContainer.Controls.Add(uc);
             frMain.Instance.MetroContainer.Controls["ucNganh"].BringToFront();
+        }
+
+        private void mtThemlich_Click(object sender, EventArgs e)
+        {
+            ucThemlich uc = new ucThemlich();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucViewlich"].BringToFront();
         }
     }
 }
