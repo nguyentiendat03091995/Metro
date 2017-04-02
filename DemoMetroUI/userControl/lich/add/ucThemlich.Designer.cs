@@ -33,17 +33,18 @@
             this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.txtPhong = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.txtLop = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.txtMon = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.mtLuu = new MetroFramework.Controls.MetroTile();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.cboGiangvien = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.cboPhong = new MetroFramework.Controls.MetroComboBox();
+            this.cboLop = new MetroFramework.Controls.MetroComboBox();
+            this.cboMon = new MetroFramework.Controls.MetroComboBox();
             this.SuspendLayout();
             // 
             // mlBack
@@ -83,129 +84,32 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(247, 133);
+            this.metroLabel2.Location = new System.Drawing.Point(247, 113);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(50, 19);
             this.metroLabel2.TabIndex = 7;
             this.metroLabel2.Text = "Phòng:";
             this.metroLabel2.Click += new System.EventHandler(this.metroLabel2_Click);
             // 
-            // txtPhong
-            // 
-            // 
-            // 
-            // 
-            this.txtPhong.CustomButton.Image = null;
-            this.txtPhong.CustomButton.Location = new System.Drawing.Point(106, 1);
-            this.txtPhong.CustomButton.Name = "";
-            this.txtPhong.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtPhong.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtPhong.CustomButton.TabIndex = 1;
-            this.txtPhong.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtPhong.CustomButton.UseSelectable = true;
-            this.txtPhong.CustomButton.Visible = false;
-            this.txtPhong.Lines = new string[0];
-            this.txtPhong.Location = new System.Drawing.Point(328, 133);
-            this.txtPhong.MaxLength = 32767;
-            this.txtPhong.Name = "txtPhong";
-            this.txtPhong.PasswordChar = '\0';
-            this.txtPhong.PromptText = "Tên phòng.....";
-            this.txtPhong.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtPhong.SelectedText = "";
-            this.txtPhong.SelectionLength = 0;
-            this.txtPhong.SelectionStart = 0;
-            this.txtPhong.ShortcutsEnabled = true;
-            this.txtPhong.Size = new System.Drawing.Size(128, 23);
-            this.txtPhong.TabIndex = 8;
-            this.txtPhong.UseSelectable = true;
-            this.txtPhong.WaterMark = "Tên phòng.....";
-            this.txtPhong.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtPhong.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(247, 162);
+            this.metroLabel3.Location = new System.Drawing.Point(247, 148);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(34, 19);
             this.metroLabel3.TabIndex = 7;
             this.metroLabel3.Text = "Lớp:";
             this.metroLabel3.Click += new System.EventHandler(this.metroLabel2_Click);
             // 
-            // txtLop
-            // 
-            // 
-            // 
-            // 
-            this.txtLop.CustomButton.Image = null;
-            this.txtLop.CustomButton.Location = new System.Drawing.Point(106, 1);
-            this.txtLop.CustomButton.Name = "";
-            this.txtLop.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtLop.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtLop.CustomButton.TabIndex = 1;
-            this.txtLop.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtLop.CustomButton.UseSelectable = true;
-            this.txtLop.CustomButton.Visible = false;
-            this.txtLop.Lines = new string[0];
-            this.txtLop.Location = new System.Drawing.Point(328, 162);
-            this.txtLop.MaxLength = 32767;
-            this.txtLop.Name = "txtLop";
-            this.txtLop.PasswordChar = '\0';
-            this.txtLop.PromptText = "Tên lớp.....";
-            this.txtLop.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtLop.SelectedText = "";
-            this.txtLop.SelectionLength = 0;
-            this.txtLop.SelectionStart = 0;
-            this.txtLop.ShortcutsEnabled = true;
-            this.txtLop.Size = new System.Drawing.Size(128, 23);
-            this.txtLop.TabIndex = 8;
-            this.txtLop.UseSelectable = true;
-            this.txtLop.WaterMark = "Tên lớp.....";
-            this.txtLop.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtLop.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtLop.Click += new System.EventHandler(this.metroTextBox2_Click);
-            // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(247, 191);
+            this.metroLabel4.Location = new System.Drawing.Point(247, 183);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(39, 19);
             this.metroLabel4.TabIndex = 7;
             this.metroLabel4.Text = "Môn:";
             this.metroLabel4.Click += new System.EventHandler(this.metroLabel2_Click);
-            // 
-            // txtMon
-            // 
-            // 
-            // 
-            // 
-            this.txtMon.CustomButton.Image = null;
-            this.txtMon.CustomButton.Location = new System.Drawing.Point(106, 1);
-            this.txtMon.CustomButton.Name = "";
-            this.txtMon.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtMon.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtMon.CustomButton.TabIndex = 1;
-            this.txtMon.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtMon.CustomButton.UseSelectable = true;
-            this.txtMon.CustomButton.Visible = false;
-            this.txtMon.Lines = new string[0];
-            this.txtMon.Location = new System.Drawing.Point(328, 191);
-            this.txtMon.MaxLength = 32767;
-            this.txtMon.Name = "txtMon";
-            this.txtMon.PasswordChar = '\0';
-            this.txtMon.PromptText = "Tên môn học....";
-            this.txtMon.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtMon.SelectedText = "";
-            this.txtMon.SelectionLength = 0;
-            this.txtMon.SelectionStart = 0;
-            this.txtMon.ShortcutsEnabled = true;
-            this.txtMon.Size = new System.Drawing.Size(128, 23);
-            this.txtMon.TabIndex = 8;
-            this.txtMon.UseSelectable = true;
-            this.txtMon.WaterMark = "Tên môn học....";
-            this.txtMon.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtMon.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroTextBox4
             // 
@@ -269,7 +173,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(247, 78);
+            this.metroLabel7.Location = new System.Drawing.Point(248, 78);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(75, 19);
             this.metroLabel7.TabIndex = 7;
@@ -286,27 +190,67 @@
             this.cboGiangvien.TabIndex = 11;
             this.cboGiangvien.UseSelectable = true;
             // 
-            // ucViewlich
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(247, 0);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(190, 19);
+            this.metroLabel8.TabIndex = 7;
+            this.metroLabel8.Text = "Thêm Mới Lịch Cho Giảng Viên";
+            // 
+            // cboPhong
+            // 
+            this.cboPhong.FormattingEnabled = true;
+            this.cboPhong.ItemHeight = 23;
+            this.cboPhong.Location = new System.Drawing.Point(329, 110);
+            this.cboPhong.Name = "cboPhong";
+            this.cboPhong.Size = new System.Drawing.Size(127, 29);
+            this.cboPhong.TabIndex = 11;
+            this.cboPhong.UseSelectable = true;
+            // 
+            // cboLop
+            // 
+            this.cboLop.FormattingEnabled = true;
+            this.cboLop.ItemHeight = 23;
+            this.cboLop.Location = new System.Drawing.Point(329, 145);
+            this.cboLop.Name = "cboLop";
+            this.cboLop.Size = new System.Drawing.Size(127, 29);
+            this.cboLop.TabIndex = 11;
+            this.cboLop.UseSelectable = true;
+            // 
+            // cboMon
+            // 
+            this.cboMon.FormattingEnabled = true;
+            this.cboMon.ItemHeight = 23;
+            this.cboMon.Location = new System.Drawing.Point(329, 180);
+            this.cboMon.Name = "cboMon";
+            this.cboMon.Size = new System.Drawing.Size(127, 29);
+            this.cboMon.TabIndex = 11;
+            this.cboMon.UseSelectable = true;
+            // 
+            // ucThemlich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cboMon);
+            this.Controls.Add(this.cboLop);
+            this.Controls.Add(this.cboPhong);
             this.Controls.Add(this.cboGiangvien);
             this.Controls.Add(this.mtLuu);
             this.Controls.Add(this.metroTextBox4);
-            this.Controls.Add(this.txtMon);
             this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.txtLop);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel7);
-            this.Controls.Add(this.txtPhong);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.metroLabel6);
+            this.Controls.Add(this.metroLabel8);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.monthCalendar2);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.mlBack);
-            this.Name = "ucViewlich";
+            this.Name = "ucThemlich";
             this.Size = new System.Drawing.Size(702, 404);
             this.Load += new System.EventHandler(this.ucViewlich_Load);
             this.ResumeLayout(false);
@@ -320,16 +264,17 @@
         private System.Windows.Forms.MonthCalendar monthCalendar2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox txtPhong;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroTextBox txtLop;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroTextBox txtMon;
         private MetroFramework.Controls.MetroTextBox metroTextBox4;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroTile mtLuu;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroComboBox cboGiangvien;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroComboBox cboPhong;
+        private MetroFramework.Controls.MetroComboBox cboLop;
+        private MetroFramework.Controls.MetroComboBox cboMon;
     }
 }

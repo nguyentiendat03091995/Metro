@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DemoMetroUI.DAL;
+using DemoMetroUI.userControl.lich.add;
+using DemoMetroUI.userControl;
+using MetroFramework;
+using DemoMetroUI;
 
 namespace DemoMetroUI.userControl.search
 {
@@ -29,7 +33,6 @@ namespace DemoMetroUI.userControl.search
         private void ucDSGV_Load(object sender, EventArgs e)
         {
             {
-
                 load(macv, mak, mahv);
             }
         }
@@ -142,8 +145,6 @@ namespace DemoMetroUI.userControl.search
                     TrangThaiGV = x.TRANGTHAIGV == "1" ? "Rảnh" : "Không Rảnh",
 
                 }).ToList();
-
-                btnThem.Enabled = false;
                 btnSua.Enabled = false;
             }
 
@@ -182,6 +183,13 @@ namespace DemoMetroUI.userControl.search
 
             mahv = hv.ToString();
             load(macv, mak, mahv);
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            ucThemlich uc = new ucThemlich();
+            frMain.Instance.MetroContainer.Controls.Add(uc);
+            frMain.Instance.MetroContainer.Controls["ucThemlich"].BringToFront();
         }
     }
 }
