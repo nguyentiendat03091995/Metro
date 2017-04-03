@@ -42,7 +42,6 @@
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.txtPhone = new MetroFramework.Controls.MetroTextBox();
             this.txtDk = new MetroFramework.Controls.MetroTextBox();
-            this.txtGioitinh = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.txtLuongcb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
@@ -53,6 +52,9 @@
             this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
             this.mtLuu = new MetroFramework.Controls.MetroTile();
             this.dtNgaysinh = new MetroFramework.Controls.MetroDateTime();
+            this.cboSex = new MetroFramework.Controls.MetroComboBox();
+            this.cboKhoa = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -329,38 +331,6 @@
             this.txtDk.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtDk.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txtGioitinh
-            // 
-            // 
-            // 
-            // 
-            this.txtGioitinh.CustomButton.Image = null;
-            this.txtGioitinh.CustomButton.Location = new System.Drawing.Point(175, 1);
-            this.txtGioitinh.CustomButton.Name = "";
-            this.txtGioitinh.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtGioitinh.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtGioitinh.CustomButton.TabIndex = 1;
-            this.txtGioitinh.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtGioitinh.CustomButton.UseSelectable = true;
-            this.txtGioitinh.CustomButton.Visible = false;
-            this.txtGioitinh.Lines = new string[0];
-            this.txtGioitinh.Location = new System.Drawing.Point(481, 226);
-            this.txtGioitinh.MaxLength = 32767;
-            this.txtGioitinh.Name = "txtGioitinh";
-            this.txtGioitinh.PasswordChar = '\0';
-            this.txtGioitinh.PromptText = "Giới tính";
-            this.txtGioitinh.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtGioitinh.SelectedText = "";
-            this.txtGioitinh.SelectionLength = 0;
-            this.txtGioitinh.SelectionStart = 0;
-            this.txtGioitinh.ShortcutsEnabled = true;
-            this.txtGioitinh.Size = new System.Drawing.Size(197, 23);
-            this.txtGioitinh.TabIndex = 13;
-            this.txtGioitinh.UseSelectable = true;
-            this.txtGioitinh.WaterMark = "Giới tính";
-            this.txtGioitinh.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtGioitinh.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // metroLabel9
             // 
             this.metroLabel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -405,7 +375,6 @@
             this.txtLuongcb.TabIndexChanged += new System.EventHandler(this.txtLuongcb_TabIndexChanged);
             this.txtLuongcb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLuongcb_KeyPress);
             this.txtLuongcb.Leave += new System.EventHandler(this.txtLuongcb_Leave);
-            
             // 
             // metroLabel10
             // 
@@ -531,14 +500,49 @@
             this.dtNgaysinh.Size = new System.Drawing.Size(197, 29);
             this.dtNgaysinh.TabIndex = 18;
             // 
+            // cboSex
+            // 
+            this.cboSex.FormattingEnabled = true;
+            this.cboSex.ItemHeight = 23;
+            this.cboSex.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cboSex.Location = new System.Drawing.Point(481, 226);
+            this.cboSex.Name = "cboSex";
+            this.cboSex.Size = new System.Drawing.Size(197, 29);
+            this.cboSex.TabIndex = 19;
+            this.cboSex.UseSelectable = true;
+            // 
+            // cboKhoa
+            // 
+            this.cboKhoa.FormattingEnabled = true;
+            this.cboKhoa.ItemHeight = 23;
+            this.cboKhoa.Location = new System.Drawing.Point(121, 362);
+            this.cboKhoa.Name = "cboKhoa";
+            this.cboKhoa.Size = new System.Drawing.Size(197, 29);
+            this.cboKhoa.TabIndex = 21;
+            this.cboKhoa.UseSelectable = true;
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(24, 362);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel8.TabIndex = 20;
+            this.metroLabel8.Text = "Khoa:";
+            // 
             // ucCreategv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cboKhoa);
+            this.Controls.Add(this.metroLabel8);
+            this.Controls.Add(this.cboSex);
             this.Controls.Add(this.dtNgaysinh);
             this.Controls.Add(this.mtLuu);
             this.Controls.Add(this.txtDk);
-            this.Controls.Add(this.txtGioitinh);
             this.Controls.Add(this.metroLabel9);
             this.Controls.Add(this.txtLuongcb);
             this.Controls.Add(this.metroLabel10);
@@ -584,7 +588,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroTextBox txtPhone;
         private MetroFramework.Controls.MetroTextBox txtDk;
-        private MetroFramework.Controls.MetroTextBox txtGioitinh;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroTextBox txtLuongcb;
         private MetroFramework.Controls.MetroLabel metroLabel10;
@@ -595,5 +598,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel13;
         private MetroFramework.Controls.MetroTile mtLuu;
         private MetroFramework.Controls.MetroDateTime dtNgaysinh;
+        private MetroFramework.Controls.MetroComboBox cboSex;
+        private MetroFramework.Controls.MetroComboBox cboKhoa;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
     }
 }
